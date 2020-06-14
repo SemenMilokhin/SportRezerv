@@ -1,32 +1,33 @@
 $(document).ready(function(){
-	initMainSlider();
-	initWidgetSliders();
+	initCommonSliders();
+	
+	function initCommonSliders() {
+		var sliders = $('.common-slider');
 
-	function initMainSlider() {
-		var container = $('.container_main-slider'),
-			slider = container.find('.main-slider'),
-			arrows = container.find('.main-slider-arrows'),
-			nextArr = arrows.find('.main-slider-arrow_next'),
-			prevArr = arrows.find('.main-slider-arrow_prev');
+		sliders.each(function(sliderIndex,slider) {
+			var slides = $(slider).find('.common-slider__slides'),
+				controls = $(slider).find('.common-slider__controls'),
+				prevArr = controls.find('.common-slider__arrow_prev'),
+				nextArr = controls.find('.common-slider__arrow_next');
 
-		slider.slick({
-			arrows: true,
-			dots: true,
-			draggable: false,
-			nextArrow: nextArr,
-			prevArrow: prevArr
-		});
-	}
-	function initWidgetSliders() {
-		var widgets = $('.widget-slider');
-
-		widgets.each(function(widgetIndex,widget) {
-			var slides = $(widget).find('.widget-slider__slides'),
-				controls = $(widget).find('widget-slider__controls'),
-				prevArr = controls.find('widget-slider__arrow_prev'),
-				nextArr = controls.find('widget-slider__arrow_next');
-
-			slides.slick();
+			if ($(slider).hasClass('common-slider_dots')) {
+				slides.slick({
+					arrows: true,
+					dots: true,
+					draggable: false,
+					prevArrow: prevArr,
+					nextArrow: nextArr
+				});
+			} else {
+				slides.slick({
+					arrows: true,
+					draggable: false,
+					prevArrow: prevArr,
+					nextArrow: nextArr
+				});
+			}
+			
+			console.log(controls);
 
 		});
 	}
