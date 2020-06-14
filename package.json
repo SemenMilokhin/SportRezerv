@@ -16,5 +16,9 @@
   },
   "browserslist": [
     "last 2 version"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "slick-carousel": "^1.8.1"
+  }
 }

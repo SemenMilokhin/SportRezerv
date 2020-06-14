@@ -2,11 +2,135 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Document</title>
 </head>
 <body>
-	Hello
+	<header class="header">
+		<div class="container container_header">
+			<a class="header-logo" href="#">Спортивное тестирование детей</a>
+			<nav class="header-navigation">
+				<a class="header-navigation__link" href="#">О проекте</a>
+				<a class="header-navigation__link" href="#">Новости</a>
+				<a class="header-navigation__link" href="#">Родителям</a>
+				<a class="header-navigation__link" href="#">Тренерам</a>
+				<a class="header-navigation__link" href="#">Статьи</a>
+				<a class="header-navigation__link" href="#">Технологии</a>
+				<a class="header-navigation__link" href="#">Галерея</a>
+			</nav>
+			<div class="header-buttons">
+				<a class="header-reserve-button" href="#">Записаться</a>
+				<span class="header-search-button-wrapper">
+					<a class="header-search-button" href="#"><svg class="header-search-button__icon" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.9 11.7H12.3L12 11.4C12.8 10.5 13.3 9.3 13.3 7.9 13.3 4.9 10.9 2.5 7.9 2.5 4.9 2.5 2.5 4.9 2.5 7.9 2.5 10.9 4.9 13.3 7.9 13.3 9.3 13.3 10.5 12.8 11.4 12L11.7 12.3V12.9L15.8 17.1 17.1 15.8 12.9 11.7ZM7.9 11.7C5.8 11.7 4.2 10 4.2 7.9 4.2 5.8 5.8 4.2 7.9 4.2 10 4.2 11.7 5.8 11.7 7.9 11.7 10 10 11.7 7.9 11.7Z"/></svg></a>
+				</span>
+			</div>
+		</div>
+	</header>
+	<main class="main-content">
+		<section class="main-slider-section">
+			<div class="container container_main-slider">
+				<div class="main-slider">
+					<div class="main-slider__slide">
+						<img class="slider-cover-image" src="https://images.squarespace-cdn.com/content/v1/5734ceed1bbee003a5eb13fc/1544498971638-I1F9K816HCFUDBZ2G9SB/ke17ZwdGBToddI8pDm48kNvT88LknE-K9M4pGNO0Iqd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USOFn4xF8vTWDNAUBm5ducQhX-V3oVjSmr829Rco4W2Uo49ZdOtO_QXox0_W7i2zEA/example.jpg?format=2500w" alt="">
+					</div>
+					<div class="main-slider__slide">
+						<img class="slider-cover-image" src="https://images.squarespace-cdn.com/content/v1/5734ceed1bbee003a5eb13fc/1544498971638-I1F9K816HCFUDBZ2G9SB/ke17ZwdGBToddI8pDm48kNvT88LknE-K9M4pGNO0Iqd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USOFn4xF8vTWDNAUBm5ducQhX-V3oVjSmr829Rco4W2Uo49ZdOtO_QXox0_W7i2zEA/example.jpg?format=2500w" alt="">
+					</div>
+				</div>
+				<div class="main-slider-arrows">
+					<button class="main-slider-arrow main-slider-arrow_prev"></button>
+					<button class="main-slider-arrow main-slider-arrow_next"></button>
+				</div>
+			</div>
+		</section>
+		<section class="advantages-section">
+			<div class="container container_advantages">
+				<h1 class="section-heading">Уникальная возможность пройти комплексное тестирование и выявить предрасположенность к видам спорта </h1>
+				<ul class="advantages">
+					<li class="advantages__item" style="background-color: #FFF9EB;">
+						<h2>Психофизиологическое<br>тестирование</h2>
+						<ul>
+							<li>Память</li>
+							<li>Внимание</li>
+							<li>Скорость реакции</li>
+							<li>Тип темперамента</li>
+							<li>Личностные качества</li>
+						</ul>
+						<img class="advantages__image" src="img/advantages-1.png" alt="">
+					</li>
+					<li class="advantages__item" style="background-color: #C2E2F9;">
+						<h2>Спортивное<br>тестирование</h2>
+						<ul>
+							<li>Сила</li>
+							<li>Гибкость</li>
+							<li>Координация</li>
+							<li>Реакция на нагрузку</li>
+							<li>Скоростно-силовые способности</li>
+							<li>Физическая работоспособность</li>
+							<li>Вестибулярная устойчивость</li>
+						</ul>
+						<img class="advantages__image" src="img/advantages-2.png" alt="">
+					</li>
+					<li class="advantages__item" style="background-color: #E8F6EE;">
+						<h2>Антропометрическое<br>исследование</h2>
+						<ul>
+							<li>Состав тела, телосложение</li>
+							<li>Физическое развитие</li>
+							<li>Оценка опорно-двигательного<br>аппарата</li>
+						</ul>
+						<img class="advantages__image" src="img/advantages-3.png" alt="">
+					</li>
+					<li class="advantages__item" style="background-color: #E8F3FA;">
+						<h2>Результаты<br>тестирования</h2>
+						<ul>
+							<li>Сравнения с физиологической<br>нормой по возрасту и полу</li>
+							<li>Предрасположенность к видам<br>спорта</li>
+						</ul>
+						<img class="advantages__image" src="img/advantages-4.png" alt="">
+					</li>
+				</ul>
+				<ul class="advantages-inline">
+					<li class="advantages-inline__item">
+						<h3>Центры тестирования</h3>
+						<p>10</p>
+					</li>
+					<li class="advantages-inline__item">
+						<h3>Дети, прошедшие тестирование</h3>
+						<p>9482</p>
+					</li>
+					<li class="advantages-inline__item">
+						<h3>Дети, занимающися в спортшколах</h3>
+						<p>127 267</p>
+					</li>
+					<li class="advantages-inline__item">
+						<h3>Спортивные школы</h3>
+						<p>82</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="feedback-section">
+			<div class="container container_feedback">
+				<div class="reviews widget-slider">
+					<div class="widget-slider__slides">
+						
+					</div>
+					<div class="widget-slider__controls">
+						<button class="widget-slider__arrow widget-slider__arrow_prev"></button>
+						<button class="widget-slider__arrow widget-slider__arrow_next"></button>
+					</div>
+				</div>
+				<div class="articles widget-slider"></div>
+			</div>
+		</section>
+	</main>
+	<footer></footer>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/common.js"></script>
 </body>
 </html>
