@@ -9,6 +9,34 @@
 	<title>Document</title>
 </head>
 <body>
+	<header class="select-region-header">
+		<div class="container container_select-region">
+			<span class="select-region-label">Выберите интересующий регион в котором действует Проект</span>
+		<!-- 	<div class="select"></div> -->
+
+			
+			<div class="select">
+				<button class="select__label">
+					<span class="select__label-value">Москва 1</span>
+					<svg class="select__label-svg" width="10" height="6" viewBox="0 0 10 6">
+						<path class="select__label-svg-path" d="M5.7,5.7C5.5,5.9,5.3,6,5,6S4.5,5.9,4.3,5.7l-4-4c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0L5,3.6l3.3-3.3c0.4-0.4,1-0.4,1.4,0c0.4,0.4,0.4,1,0,1.4L5.7,5.7z"/>
+					</svg>
+				</button>
+				<input type="hidden" class="select__hidden-input" name="property-type" id="property-type-field">
+				<ul class="select__list">
+					<li class="select__list-item" data-value="Moscow-1">Москва 1</li>
+					<li class="select__list-item" data-value="Moscow-2">Москва 2</li>
+					<li class="select__list-item" data-value="Moscow-3">Москва 3</li>
+				</ul>
+			</div>
+
+
+
+			<div class="select-region-buttons-area">
+				
+			</div>
+		</div>
+	</header>
 	<header class="header">
 		<div class="container container_header">
 			<a class="header-logo" href="#">Спортивное тестирование детей</a>
@@ -34,10 +62,10 @@
 			<div class="container common-slider common-slider_dots main-slider">
 				<div class="common-slider__slides main-slider__slides">
 					<div class="common-slider__slide main-slider__slide">
-						<img class="slider-cover-image" src="https://images.squarespace-cdn.com/content/v1/5734ceed1bbee003a5eb13fc/1544498971638-I1F9K816HCFUDBZ2G9SB/ke17ZwdGBToddI8pDm48kNvT88LknE-K9M4pGNO0Iqd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USOFn4xF8vTWDNAUBm5ducQhX-V3oVjSmr829Rco4W2Uo49ZdOtO_QXox0_W7i2zEA/example.jpg?format=2500w" alt="">
+						<img class="slider-cover-image" src="img/slider-example.jpg" alt="">
 					</div>
 					<div class="common-slider__slide main-slider__slide">
-						<img class="slider-cover-image" src="https://images.squarespace-cdn.com/content/v1/5734ceed1bbee003a5eb13fc/1544498971638-I1F9K816HCFUDBZ2G9SB/ke17ZwdGBToddI8pDm48kNvT88LknE-K9M4pGNO0Iqd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USOFn4xF8vTWDNAUBm5ducQhX-V3oVjSmr829Rco4W2Uo49ZdOtO_QXox0_W7i2zEA/example.jpg?format=2500w" alt="">
+						<img class="slider-cover-image" src="img/slider-example.jpg" alt="">
 					</div>
 				</div>
 				<div class="common-slider__controls main-slider__controls">
@@ -153,7 +181,36 @@
 					</div>
 				</div>
 				<div class="minimap">
-					
+					<img class="minimap__image" src="img/region.jpg" alt="">
+				</div>
+				<div class="feedback-column">
+					<div class="extended-reviews-slider common-slider">
+						<div class="extended-reviews-slider__slides common-slider__slides">
+							<div class="extended-reviews-slider__slide common-slider__slide">
+								<p class="extended-reviews-slider__author">Евгений Милешкин, Мастер спорта СССР: </p>
+								<p class="extended-reviews-slider__text">“Тот пример, когда сочетание спорта и науки даёт уверенность в новых победах наших спортсменов...”</p>
+								<img class="extended-reviews-slider__image" src="img/meleshkin 1.png" alt="">
+							</div>
+							<div class="extended-reviews-slider__slide common-slider__slide">
+								<p class="extended-reviews-slider__author">Евгений Милешкин, Мастер спорта СССР: </p>
+								<p class="extended-reviews-slider__text">“Тот пример, когда сочетание спорта и науки даёт уверенность в новых победах наших спортсменов...”</p>
+								<img class="extended-reviews-slider__image" src="img/meleshkin 1.png" alt="">
+							</div>
+						</div>
+						<div class="common-slider__controls">
+							<button class="common-slider__arrow common-slider__arrow_prev"></button>
+							<button class="common-slider__arrow common-slider__arrow_next"></button>
+						</div>
+					</div>
+					<div class="feedback-video-wrapper">
+						<video class="feedback-video" width="702" height="375" controls="controls" poster="img/videoplaceholder.jpg">
+							<!-- <source src="video.ogv" type='video/ogg; codecs="theora, vorbis"'>
+							<source src="video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+							<source src="video.webm" type='video/webm; codecs="vp8, vorbis"'> -->
+							Тег video не поддерживается вашим браузером. 
+							<a href="video.mp4">Скачайте видео</a>.
+						</video>
+					</div>
 				</div>
 			</div>
 		</section>

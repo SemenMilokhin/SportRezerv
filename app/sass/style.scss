@@ -25,6 +25,83 @@ body {
 	padding-right: 12px;
 	width: 1440px;
 }
+
+
+.select {
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	width: 217px;
+	padding: 0;
+	background-color: #fff;
+	&.opened {
+		z-index: 5;
+		.select__label-svg {
+			transform: rotateX(180deg);
+		}
+	}
+	&__label {
+		position: relative;
+		text-align: left;
+		cursor: pointer;
+		display: inline-block;
+		background: none;
+		border: none;
+		outline: none;
+		margin: 0;
+		padding: 0 27px 0 18px;
+		box-sizing: border-box;
+		width: 100%;
+		height: 29px;
+		font: 500 14px/1.15 'Roboto',sans-serif;
+		color: $text-color;
+	}
+	&__label-value {
+		vertical-align: middle;
+		display: inline-block;
+		overflow: hidden;
+		max-width: 100%;
+		max-height: 100%;
+		white-space: nowrap;
+	}
+	&__label-svg {
+		position: absolute;
+		right: 9px;
+		top: 12px;
+		transition: 0.3s;
+	}
+	&__label-svg-path {
+		fill: $text-color;
+	}
+	&__hidden-input {
+		visibility: hidden;
+	}
+	&__list {
+		background-color: #fff;
+		clip: rect(0, 9999px, 0, 0);
+		list-style: none;
+		box-sizing: border-box;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		z-index: -1;
+		top: 29px;
+		left: 0;
+		transition: clip 0.3s;
+	}
+	&__list-item {
+		padding: 4px 18px;
+		margin: 0;
+		cursor: pointer;
+		font-size: 14px;
+		line-height: 1.5;
+		font-weight: 500;
+		color: $text-color;
+	}
+}
+
+
 .section-heading {
 	font-size: 45px;
 	font-weight: 400;
@@ -84,6 +161,24 @@ body {
 	}
 }
 
+//--------------------------------------------------------------------------
+//                        Select Region Header Section
+//--------------------------------------------------------------------------
+.select-region-header {
+	background-color: $header-text-color;
+	color: $light-text-color;
+	font-size: 14px;
+}
+.container_select-region {
+	min-height: 43px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.select-region-label {
+	margin: 0 20px 0 0;
+}
 //--------------------------------------------------------------------------
 //                              Header Section
 //--------------------------------------------------------------------------
@@ -322,6 +417,7 @@ body {
 	word-spacing: 12px;
 }
 .reviews-slider {
+	margin: 0 0 12px;
 	vertical-align: top;
 	font-size: 20px;
 	background-color: $substrate-color;
@@ -342,6 +438,7 @@ body {
 	}
 }
 .articles-slider {
+	margin: 0 0 12px;
 	vertical-align: top;
 	font-size: 20px;
 	background-color: $substrate-color;
@@ -370,8 +467,72 @@ body {
 	}
 }
 .minimap {
+	vertical-align: top;
 	display: inline-block;
 	width: 702px;
+	margin: 0 0 12px;
+	&__image {
+		display: inline-block;
+		width: 100%;
+	}
+}
+.feedback-column {
+	vertical-align: top;
+	display: inline-block;
+	width: 702px;
+	word-spacing: 12px;
+	font-size: 0;
+	margin: 0 0 12px;
+}
+.extended-reviews-slider {
+	margin: 0 0 12px;
+	vertical-align: top;
+	font-size: 20px;
+	background-color: $substrate-color;
+	border-radius: 10px;
+	word-spacing: normal;
+	display: inline-block;
+	width: 702px;
+	&__slide {
+		position: relative;
+		padding: 14px 50px;
+		min-height: 180px;
+	}
+	&__author {
+		font-size: 20px;
+		font-weight: 500;
+		margin: 0 0 20px 45px;
+	}
+	&__text {
+		padding-left: 112px;
+		margin: 0;
+	}
+	&__image {
+		display: inline-block;
+		position: absolute;
+		bottom: 0;
+		left: 45px;
+		top: auto;
+		right: auto;
+		max-width: 100px;
+		max-height: 120px;
+	}
+}
+.feedback-video-wrapper {
+	margin: 0;
+	vertical-align: top;
+	font-size: 20px;
+	background-color: $substrate-color;
+	border-radius: 10px;
+	word-spacing: normal;
+	display: inline-block;
+	width: 702px;
+}
+.feedback-video {
+	outline: none;
+	border-radius: 10px;
+	display: block;
+	width: 100%;
 }
 
 //--------------------------------------------------------------------------
@@ -407,6 +568,7 @@ body {
 .footer-social {
 	font-size: 0;
 	word-spacing: 20px;
+	margin: 0 30px 0 0;
 	&__link {
 		display: inline-block;
 	}
