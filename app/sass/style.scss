@@ -275,6 +275,7 @@ body {
 	vertical-align: top;
 	display: inline-block;
 	padding: 13px 0 0 11px;
+	position: relative;
 }
 .header-search-button {
 	display: inline-block;
@@ -283,6 +284,63 @@ body {
 		width: 20px;
 		height: 20px;
 		fill: $text-color;
+	}
+}
+.search-row-wrapper {
+	display: none;
+	justify-content: flex-start;
+	align-items: flex-start;
+	position: absolute;
+	right: -12px;
+	top: 0;
+	bottom: auto;
+	left: auto;
+	width: 467px;
+	background-color: #fff;
+	border: 1px solid $accent-color;
+	height: 43px;
+	&_active {
+		display: flex;
+	}
+}
+.search-query-field {
+	display: inline-block;
+	width: 350px;
+	background: none;
+	border: none;
+	outline: none;
+	padding: 10px;
+	height: 100%;
+	font-family: 'roboto', sans-serif;
+}
+.search-btn {
+	font-family: 'roboto', sans-serif;
+	font-size: 14px;
+	height: 100%;
+	border: none;
+	background: none;
+	padding: 0 11px 0 9px;
+	outline: none;
+	cursor: pointer;
+	&__icon {
+		display: inline-block;
+		width: 18px;
+		height: 18px;
+		vertical-align: bottom;
+		margin-right: 7px;
+	}
+}
+.close-search-btn {
+	height: 100%;
+	border: none;
+	background: none;
+	padding: 0 8px;
+	outline: none;
+	cursor: pointer;
+	&__icon {
+		display: inline-block;
+		width: 11px;
+		height: 11px;
 	}
 }
 
@@ -502,13 +560,44 @@ body {
 	}
 }
 .minimap {
+	position: relative;
 	vertical-align: top;
 	display: inline-block;
 	width: 702px;
 	margin: 0 0 12px;
 	&__image {
 		display: inline-block;
-		width: 100%;
+	}
+}
+.locations-on-map-list {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 0;
+	width: 0;
+}
+.map-location {
+	display: none;
+	width: 320px;
+	min-height: 100px;
+	word-spacing: normal;
+	position: absolute;
+	z-index: 1;
+	border-radius: 10px;
+	border: 1px solid $text-color;
+	font-size: 20px;
+	padding: 10px 15px;
+	background-color: #fff;
+	&__heading {
+		text-align: center;
+		padding: 0;
+		margin: 0 0 2px;
+		font-weight: 700;
+	}
+	&__text {
+		text-align: center;
+		padding: 0;
+		margin: 0 0 2px;
 	}
 }
 .locations-list {

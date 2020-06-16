@@ -50,6 +50,11 @@
 				<a class="header-reserve-button" href="#">Записаться</a>
 				<span class="header-search-button-wrapper">
 					<a class="header-search-button" href="#"><svg class="header-search-button__icon" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.9 11.7H12.3L12 11.4C12.8 10.5 13.3 9.3 13.3 7.9 13.3 4.9 10.9 2.5 7.9 2.5 4.9 2.5 2.5 4.9 2.5 7.9 2.5 10.9 4.9 13.3 7.9 13.3 9.3 13.3 10.5 12.8 11.4 12L11.7 12.3V12.9L15.8 17.1 17.1 15.8 12.9 11.7ZM7.9 11.7C5.8 11.7 4.2 10 4.2 7.9 4.2 5.8 5.8 4.2 7.9 4.2 10 4.2 11.7 5.8 11.7 7.9 11.7 10 10 11.7 7.9 11.7Z"/></svg></a>
+					<span class="search-row-wrapper">
+						<input class="search-query-field" type="text">
+						<button class="search-btn" type="submit"><svg class="search-btn__icon" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.9 11.7H12.3L12 11.4C12.8 10.5 13.3 9.3 13.3 7.9 13.3 4.9 10.9 2.5 7.9 2.5 4.9 2.5 2.5 4.9 2.5 7.9 2.5 10.9 4.9 13.3 7.9 13.3 9.3 13.3 10.5 12.8 11.4 12L11.7 12.3V12.9L15.8 17.1 17.1 15.8 12.9 11.7ZM7.9 11.7C5.8 11.7 4.2 10 4.2 7.9 4.2 5.8 5.8 4.2 7.9 4.2 10 4.2 11.7 5.8 11.7 7.9 11.7 10 10 11.7 7.9 11.7Z"/></svg>Поиск</button>
+						<button class="close-search-btn"><svg class="close-search-btn__icon" viewBox="0 0 329.3 329"><path d="m194.8 164.8 128.2-128.2c8.3-8.3 8.3-21.8 0-30.2-8.3-8.3-21.8-8.3-30.2 0l-128.2 128.2-128.2-128.2c-8.3-8.3-21.8-8.3-30.2 0-8.3 8.3-8.3 21.8 0 30.2l128.2 128.2-128.2 128.2c-8.3 8.3-8.3 21.8 0 30.2 4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2l128.2-128.2 128.2 128.2c4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2 8.3-8.3 8.3-21.8 0-30.2zm0 0"/></svg></button>
+					</span>
 				</span>
 			</div>
 		</div>
@@ -178,7 +183,83 @@
 					</div>
 				</div>
 				<div class="minimap">
-					<img class="minimap__image" src="img/region.jpg" alt="">
+					<img class="minimap__image" src="img/region.jpg" alt="" usemap="#map">
+					<map name="map">
+						<area data-location="ЗАО" alt="" href="#ЗАО" coords="164,416,215,374,207,363,241,321,231,316,227,305,245,288,252,269,241,263,222,277,210,258,192,243,181,246,178,270,163,282,148,269,164,263,171,249,161,233,148,237,129,235,119,241,102,241,97,247,101,258,103,294,111,318,134,347,136,361,126,372,135,380,119,386,114,380,108,381,107,389,100,389,100,378,84,392,73,401,71,411,76,421,91,416,94,426,102,435,127,425,136,411,133,386,147,386,158,399" shape="poly">
+						<area data-location="СЗАО" alt="" href="#СЗАО" coords="199,244,211,252,231,241,235,216,266,231,238,159,246,139,231,130,218,79,201,68,194,73,180,68,167,23,150,26,146,39,159,52,152,68,178,80,171,99,157,101,161,85,146,82,128,93,132,104,123,112,135,122,135,148,168,132,152,188,153,208,213,201,221,218" shape="poly">
+						<area data-location="САО" alt="" href="#САО" coords="280,181,265,134,270,119,258,112,240,64,228,50,232,42,257,39,298,9,324,27,330,65,332,100,329,120,335,139,340,170,336,183,310,186,292,206" shape="poly">
+						<area data-location="СВАО" alt="" href="#СВАО" coords="357,51,360,7,352,0,345,2,348,12,334,16,346,60,364,71,370,131,365,142,373,170,374,181,382,182,385,192,393,194,394,182,405,182,430,146,427,131,442,111,448,122,458,118,458,106,447,104,460,90,467,83,445,66,416,66,377,52" shape="poly">
+						<area data-location="ВАО" alt="" href="#ВАО" coords="498,83,475,103,486,105,488,123,467,122,450,140,438,186,438,201,479,214,490,231,486,252,601,326,638,310,656,283,605,290,590,284,621,254,583,259,576,152" shape="poly">
+						<area data-location="ЮВАО" alt="" href="#ЮВАО" coords="468,262,471,246,465,235,448,243,444,254,434,256,436,265,454,281,452,294,438,298,428,289,432,333,464,344,464,358,437,375,434,398,460,412,486,411,520,400,522,432,559,392,551,348,574,365,583,339" shape="poly">
+						<area data-location="ЦАО" alt="" href="#ЦАО" coords="362,198,415,221,383,248,383,257,405,273,400,282,341,299,327,294,319,309,293,309,284,296,308,275,309,254,289,263,274,266,265,246,287,227,311,227,323,201,331,201,340,212,344,201" shape="poly">
+						<area data-location="ЮАО" alt="" href="#ЮАО" coords="344,384,327,347,335,326,371,324,371,317,386,319,388,354,418,364,422,378,394,400,391,416,419,435,445,436,475,421,477,444,483,454,437,500,399,525,335,524,321,514,323,485,319,471,330,448,319,448,324,429,344,432" shape="poly">
+						<area data-location="ЮЗАО" alt="" href="#ЮЗАО" coords="281,311,244,355,252,361,207,404,241,455,268,464,271,473,264,478,271,489,267,506,220,524,218,536,261,549,253,566,273,563,269,554,287,549,283,562,286,570,301,568,294,544,293,504,304,492,287,473,289,447,292,414,281,410,289,398,308,399,306,364,311,351" shape="poly">
+						<area data-location="НАО" alt="" href="#НАО" coords="140,430,133,450,147,459,163,459,172,437,207,481,225,492,224,508,195,524,212,535,218,553,233,541,238,558,225,573,222,592,200,590,181,565,147,583,131,566,128,536,145,512,114,518,53,509,41,478,81,461,80,475,103,444" shape="poly">
+						<area data-location="ТАО" alt="" href="#ТАО" coords="174,623,4,623,0,593,20,579,52,597,31,574,46,550,41,527,62,512,125,526,118,571,148,592" shape="poly">
+						<area data-location="ЗелАО" alt="" href="#ЗелАО" coords="64,119,20,100,23,59,7,29,32,24,33,34,56,17,67,30,104,59,98,65,106,67,105,93,90,77,74,75,64,97,74,113,72,120" shape="poly">
+					</map>
+					<div class="locations-on-map-list">
+						<div class="map-location" style="top: 230px; left: 280px;" data-location="ЗАО">
+							<p class="map-location__heading">ЗАО</p>
+							<p class="map-location__text">Адрес 1</p>
+							<p class="map-location__text">Адрес 2</p>
+						</div>
+						<div class="map-location" style="top: 80px; left: 270px;" data-location="СЗАО">
+							<p class="map-location__heading">СЗАО</p>
+							<p class="map-location__text">Адрес 1</p>
+							<p class="map-location__text">Адрес 2</p>
+						</div>
+						<div class="map-location" style="top: 30px; left: 350px;" data-location="САО">
+							<p class="map-location__heading">САО</p>
+							<p class="map-location__text">Адрес 1</p>
+							<p class="map-location__text">Адрес 2</p>
+						</div>
+						<div class="map-location" style="top: 30px; left: 480px;" data-location="СВАО">
+							<p class="map-location__heading">СВАО</p>
+							<p class="map-location__text">Адрес 1</p>
+							<p class="map-location__text">Адрес 2</p>
+						</div>
+						<div class="map-location" style="top: 110px; left: 610px;" data-location="ВАО">
+							<p class="map-location__heading">ВАО</p>
+							<p class="map-location__text">Адрес 1</p>
+							<p class="map-location__text">Адрес 2</p>
+						</div>
+						<div class="map-location" style="top: 300px; left: 600px;" data-location="ЮВАО">
+							<p class="map-location__heading">ЮВАО</p>
+							<p class="map-location__text">Адрес 1</p>
+							<p class="map-location__text">Адрес 2</p>
+						</div>
+						<div class="map-location" style="top: 200px; left: 430px;" data-location="ЦАО">
+							<p class="map-location__heading">ЦАО</p>
+							<p class="map-location__text">Адрес 1</p>
+							<p class="map-location__text">Адрес 2</p>
+						</div>
+						<div class="map-location" style="top: 340px; left: 500px;" data-location="ЮАО">
+							<p class="map-location__heading">ЮАО</p>
+							<p class="map-location__text">Адрес 1</p>
+							<p class="map-location__text">Адрес 2</p>
+						</div>
+						<div class="map-location" style="top: 360px; left: 330px;" data-location="ЮЗАО">
+							<p class="map-location__heading">ЮЗАО</p>
+							<p class="map-location__text">Адрес 1</p>
+							<p class="map-location__text">Адрес 2</p>
+						</div>
+						<div class="map-location" style="top: 460px; left: 250px;" data-location="НАО">
+							<p class="map-location__heading">НАО</p>
+							<p class="map-location__text">Адрес 1</p>
+							<p class="map-location__text">Адрес 2</p>
+						</div>
+						<div class="map-location" style="top: 500px; left: 200px;" data-location="ТАО">
+							<p class="map-location__heading">ТАО</p>
+							<p class="map-location__text">Адрес 1</p>
+							<p class="map-location__text">Адрес 2</p>
+						</div>
+						<div class="map-location" style="top: 10px; left: 130px;" data-location="ЗелАО">
+							<p class="map-location__heading">ЗелАО</p>
+							<p class="map-location__text">Адрес 1</p>
+							<p class="map-location__text">Адрес 2</p>
+						</div>
+					</div>
 					<div class="locations-list">
 						<h3 class="locations-heading">Центры<br>тестирования</h3>
 						<p class="locations-group-name">ЦАО</p>

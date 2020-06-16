@@ -1,6 +1,9 @@
 $(document).ready(function(){
 	initCommonSliders();
 	initSelects();
+	initSearchRow();
+	initRegionHeader();
+	initMinimap();
 	
 	function initCommonSliders() {
 		var sliders = $('.common-slider');
@@ -82,6 +85,58 @@ $(document).ready(function(){
 					closeSelect();
 				})
 			})
+		});
+	}
+	function initSearchRow() {
+		var seacrhButtons = $('.header-search-button');
+
+		seacrhButtons.each( function( seacrhButtonIndex, seacrhButton ) {
+			var parent = $(seacrhButton).parent('.header-search-button-wrapper'),
+				wrapper = parent.find('.search-row-wrapper'),
+				closeBtn = wrapper.find('.close-search-btn');
+			$(seacrhButton).on('click', function( event ) {
+				event.preventDefault();
+				wrapper.addClass('search-row-wrapper_active');
+				event.stopPropagation();
+				$(window).on('click.custom', function( evt ) {
+					wrapper.removeClass('search-row-wrapper_active');
+				});
+			} )
+			parent.on('click', function( event ) {
+				event.stopPropagation();
+			} );
+			closeBtn.on('click', function( event ) {
+				event.preventDefault();
+				wrapper.removeClass('search-row-wrapper_active');
+			});
+		} );
+	}
+	function initRegionHeader() {
+		var header = $('.select-region-header'),
+			closeBtn = header.find('.select-region-close-btn');
+
+		closeBtn.on('click', function(event) {
+			event.preventDefault();
+			header.remove();
+		})
+	}
+	function initMinimap() {
+		var mapWrapper = $('.minimap'),
+			map = mapWrapper.find("map[name='map']"),
+			areas = map.find('area'),
+			locationsList = mapWrapper.find('.locations-on-map-list');
+
+		areas.each( function(areaIndex, area) {
+			var location = locationsList.find(".map-location[data-location='"+ $(area).attr('data-location') +"']");
+
+			$(area).on('mouseenter', function(event) {
+				event.preventDefault();
+				location.css({display: 'block'});
+			});
+			$(area).on('mouseleave', function(event) {
+				event.preventDefault();
+				location.css({display: 'none'});
+			});
 		});
 	}
 });
