@@ -9,6 +9,47 @@
 	<title>Document</title>
 </head>
 <body>
+	<div class="modal-windows">
+		<div class="modal-substrate"></div>
+		<div class="modal-window modal-window_reserve" data-type-of-modal-window="reserve">
+			<button class="modal-window-close-btn"><svg class="modal-window-close-btn__icon" viewBox="0 0 329.3 329"><path d="m194.8 164.8 128.2-128.2c8.3-8.3 8.3-21.8 0-30.2-8.3-8.3-21.8-8.3-30.2 0l-128.2 128.2-128.2-128.2c-8.3-8.3-21.8-8.3-30.2 0-8.3 8.3-8.3 21.8 0 30.2l128.2 128.2-128.2 128.2c-8.3 8.3-8.3 21.8 0 30.2 4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2l128.2-128.2 128.2 128.2c4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2 8.3-8.3 8.3-21.8 0-30.2zm0 0"/></svg></button>
+			<h2 class="modal-heading">Обратная связь</h2>
+			<form class="modal-form" action="">
+				<input class="modal-input" type="text" placeholder="ФИО">
+				<input class="modal-input" type="text" placeholder="Эл. почта">
+				<input class="modal-input" type="text" placeholder="Телефон">
+				<div class="select select_modal">
+					<button class="select__label">
+						<span class="select__label-value">Выберите тему</span>
+						<svg class="select__label-svg" width="10" height="6" viewBox="0 0 10 6">
+							<path class="select__label-svg-path" d="M5.7,5.7C5.5,5.9,5.3,6,5,6S4.5,5.9,4.3,5.7l-4-4c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0L5,3.6l3.3-3.3c0.4-0.4,1-0.4,1.4,0c0.4,0.4,0.4,1,0,1.4L5.7,5.7z"/>
+						</svg>
+					</button>
+					<input type="hidden" class="select__hidden-input" name="theme" id="theme-field">
+					<ul class="select__list">
+						<li class="select__list-item" data-value="Theme-1">Тема 1</li>
+						<li class="select__list-item" data-value="Theme-2">Тема 2</li>
+						<li class="select__list-item" data-value="Theme-3">Тема 3</li>
+					</ul>
+				</div>
+				<textarea class="modal-textarea" placeholder="Сообщение"></textarea>
+				<div class="modal-add-file-area">
+					<button class="modal-button modal-button_add-file">Прикрепить файл</button>
+					<span class="modal-label">Файл объёмом до 10 Мб</span>
+				</div>
+				<div class="modal-buttons-area">
+					<button class="modal-button modal-button_submit">Отправить</button>
+					<button class="modal-button modal-button_cancel">Отменить</button>
+				</div>
+			</form>
+		</div>
+		<div class="modal-window modal-window_vacancies" data-type-of-modal-window="vacancies">
+			<button class="modal-window-close-btn"><svg class="modal-window-close-btn__icon" viewBox="0 0 329.3 329"><path d="m194.8 164.8 128.2-128.2c8.3-8.3 8.3-21.8 0-30.2-8.3-8.3-21.8-8.3-30.2 0l-128.2 128.2-128.2-128.2c-8.3-8.3-21.8-8.3-30.2 0-8.3 8.3-8.3 21.8 0 30.2l128.2 128.2-128.2 128.2c-8.3 8.3-8.3 21.8 0 30.2 4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2l128.2-128.2 128.2 128.2c4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2 8.3-8.3 8.3-21.8 0-30.2zm0 0"/></svg></button>
+			<h2 class="modal-heading">Вакансии</h2>
+			<p class="modal-message">На данный момент вакансий НЕТ!</p>
+			<p class="modal-message">Отправить резюме можно через окно <a class="modal-link" href="#" data-modal="reserve">обратной связи</a></p>
+		</div>
+	</div>
 	<header class="select-region-header">
 		<div class="container container_select-region">
 			<span class="select-region-label">Выберите интересующий регион в котором действует Проект</span>
@@ -47,7 +88,7 @@
 				<a class="header-navigation__link" href="#">Галерея</a>
 			</nav>
 			<div class="header-buttons">
-				<a class="header-reserve-button" href="#">Записаться</a>
+				<a class="header-reserve-button" href="#" data-modal="reserve">Записаться</a>
 				<span class="header-search-button-wrapper">
 					<a class="header-search-button" href="#"><svg class="header-search-button__icon" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.9 11.7H12.3L12 11.4C12.8 10.5 13.3 9.3 13.3 7.9 13.3 4.9 10.9 2.5 7.9 2.5 4.9 2.5 2.5 4.9 2.5 7.9 2.5 10.9 4.9 13.3 7.9 13.3 9.3 13.3 10.5 12.8 11.4 12L11.7 12.3V12.9L15.8 17.1 17.1 15.8 12.9 11.7ZM7.9 11.7C5.8 11.7 4.2 10 4.2 7.9 4.2 5.8 5.8 4.2 7.9 4.2 10 4.2 11.7 5.8 11.7 7.9 11.7 10 10 11.7 7.9 11.7Z"/></svg></a>
 					<span class="search-row-wrapper">
@@ -322,7 +363,7 @@
 			<nav class="footer-navigation">
 				<a href="#" class="footer-navigation__link">Онлайн тестирование</a>
 				<a href="#" class="footer-navigation__link">Вопросы</a>
-				<a href="#" class="footer-navigation__link">Вакансии</a>
+				<a href="#" class="footer-navigation__link" data-modal="vacancies">Вакансии</a>
 				<a href="#" class="footer-navigation__link">Обратная связь</a>
 				<a href="#" class="footer-navigation__link">info@sportrezerv.ru</a>
 				<a href="#" class="footer-navigation__link">+7 495 7881111</a>

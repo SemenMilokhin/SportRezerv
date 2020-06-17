@@ -18,6 +18,9 @@ body {
 	line-height: 1.15;
 	font-weight: 400;
 	color: $text-color;
+	&.no-scroll {
+		overflow: hidden;
+	}
 }
 .container {
 	margin: 0 auto;
@@ -32,6 +35,37 @@ body {
 	width: 217px;
 	padding: 0;
 	background-color: #fff;
+	&_modal {
+		width: 435px;
+		display: block;
+		margin: 0 0 23px;
+
+		.select {
+			&__label {
+				border: 1px solid $text-color;
+				font-weight: 400;
+				font-size: 14px;
+				height: 35px;
+				padding: 9px 58px 8px 24px;
+			}
+			&__label-svg {
+				right: 24px;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+			}
+			&__list {
+				border: 1px solid $text-color;
+				border-top: none;
+			}
+			&__list-item  {
+				padding: 9px 24px 8px;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 1.15;
+			}
+		}
+	}
 	&.opened {
 		z-index: 5;
 		.select__label-svg {
@@ -84,7 +118,7 @@ body {
 		padding: 0;
 		position: absolute;
 		z-index: -1;
-		top: 29px;
+		top: 100%;
 		left: 0;
 		transition: clip 0.3s;
 	}
@@ -718,6 +752,149 @@ body {
 }
 
 //--------------------------------------------------------------------------
+//                             Modal Windows
+//--------------------------------------------------------------------------
+.modal-windows {
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+	&_opened {
+		display: block;
+	}
+}
+.modal-substrate {
+	width: 100%;
+	height: 100%;
+	background-color: transparentize($text-color,.6);
+}
+.modal-window {
+	display: none;
+	top: 50%;
+	left: 0;
+	right: 0;
+	transform: translate(0, -50%);
+	position: absolute;
+	width: 702px;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 20px 41px;
+	min-height: 702px;
+	color: $text-color;
+	&_opened {
+		display: block;
+	}
+	&_reserve {
+
+	}
+	&_vacancies {
+
+	}
+}
+.modal-window-close-btn {
+	top: 6px;
+	right: 6px;
+	left: auto;
+	bottom: auto;
+	position: absolute;
+	cursor: pointer;
+	background: none;
+	padding: 10px;
+	border: none;
+	outline: none;
+	&__icon {
+		display: block;
+		width: 12px;
+		height: 12px;
+	}
+}
+.modal-heading {
+	margin: 0 0 28px;
+	font-size: 30px;
+	font-weight: 700;
+	text-align: center;
+}
+.modal-form {
+
+}
+.modal-input {
+	display: block;
+	background-color: #fff;
+	border: 1px solid $text-color;
+	font-size: 14px;
+	font-family: 'roboto', sans-serif;
+	line-height: 1.15;
+	margin: 0 0 23px;
+	width: 435px;
+	padding: 9px 24px 8px;
+	outline: none;
+}
+.modal-textarea {
+	outline: none;
+	display: block;
+	width: 100%;
+	height: 240px;
+	resize: none;
+	font-size: 14px;
+	font-family: 'roboto', sans-serif;
+	line-height: 1.15;
+	padding: 16px 24px;
+	margin: 0 0 23px;
+}
+.modal-message {
+	font-weight: 500;
+	margin: 0 0 20px;
+	font-size: 18px;
+}
+.modal-link {
+	color: $accent-color;
+	text-decoration: none;
+}
+.modal-add-file-area {
+	margin: 0 0 34px;
+	font-size: 0;
+	word-spacing: 20px;
+}
+.modal-button {
+	vertical-align: middle;
+	word-spacing: normal;
+	display: inline-block;
+	font-size: 14px;
+	font-family: 'roboto', sans-serif;
+	font-weight: 500;
+	border: none;
+	line-height: 1.15;
+	padding: 10px 20px 9px;
+	cursor: pointer;
+	outline: none;
+	&_add-file {
+
+	}
+	&_submit {
+		background-color: $accent-color;
+		color: #fff;
+	}
+	&_cancel {
+
+	}
+}
+.modal-label {
+	vertical-align: middle;
+	word-spacing: normal;
+	font-size: 14px;
+	font-weight: 500;
+}
+.modal-buttons-area {
+	text-align: center;
+	word-spacing: 30px;
+	font-size: 0;
+}
+
+
+//--------------------------------------------------------------------------
 //                             Media Queries
 //--------------------------------------------------------------------------
 @media (min-width: 1440px) {
@@ -726,6 +903,9 @@ body {
 	}
 	.select__list-item:hover {
 		background-color: $substrate-color;
+	}
+	.modal-link:hover {
+		text-decoration: underline;
 	}
 	.header-logo:hover {
 		text-decoration: underline;

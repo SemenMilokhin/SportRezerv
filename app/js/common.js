@@ -4,6 +4,7 @@ $(document).ready(function(){
 	initSearchRow();
 	initRegionHeader();
 	initMinimap();
+	initModalWindows();
 	
 	function initCommonSliders() {
 		var sliders = $('.common-slider');
@@ -100,6 +101,7 @@ $(document).ready(function(){
 				event.stopPropagation();
 				$(window).on('click.custom', function( evt ) {
 					wrapper.removeClass('search-row-wrapper_active');
+					$(window).off('click.custom');
 				});
 			} )
 			parent.on('click', function( event ) {
@@ -138,5 +140,54 @@ $(document).ready(function(){
 				location.css({display: 'none'});
 			});
 		});
+	}
+	function initModalWindows() {
+		var wrapper = $('.modal-windows'),
+			modalWindows = wrapper.find('.modal-window'),
+			closeAllModalWindows = function() {
+				$( 'body' ).removeClass( 'no-scroll' );
+				wrapper.removeClass( 'modal-windows_opened' );
+				modalWindows.each( function( modalWindowIndex, modalWindow ) {
+					$( modalWindow ).removeClass( 'modal-window_opened' );
+				} );
+			}
+
+		modalWindows.each( function( modalWindowIndex, modalWindow ) {
+			var typeOfModalWidnow = $( modalWindow ).attr( 'data-type-of-modal-window' ),
+				triggers = $( "[data-modal='"+ typeOfModalWidnow +"']" ),
+				closeBtn = $( modalWindow ).find( '.modal-window-close-btn' ),
+				closeWindow = function() {
+					$( 'body' ).removeClass( 'no-scroll' );
+					wrapper.removeClass( 'modal-windows_opened' );
+					$( modalWindow ).removeClass( 'modal-window_opened' );
+				},
+				openWindow = function() {
+					$( 'body' ).addClass( 'no-scroll' );
+					wrapper.addClass( 'modal-windows_opened' );
+					$( modalWindow ).addClass( 'modal-window_opened' );
+					$( window ).on( 'click.modalWindow', function( event ) {
+						closeWindow();
+						$( window ).off( 'click.modalWindow' );
+					} );
+				};
+
+			triggers.each( function( triggerIndex, trigger ) {
+				$( trigger ).on( 'click', function( event ) {
+					event.preventDefault();
+					event.stopPropagation();
+					closeAllModalWindows();
+					openWindow();
+				} );
+			} );
+
+			$( modalWindow ).on( 'click', function( event ) {
+				event.stopPropagation();
+			} );
+
+			closeBtn.on( 'click', function( event ) {
+				closeWindow();
+			} );
+		} );
+
 	}
 });
