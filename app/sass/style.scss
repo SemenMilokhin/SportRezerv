@@ -138,6 +138,10 @@ body {
 	margin: 0 0 40px;
 	text-align: center;
 }
+.section-link {
+	color: $accent-color;
+	text-decoration: none;
+}
 .common-slider {
 	position: relative;
 	&__slide {
@@ -1245,8 +1249,133 @@ body {
 	width: auto;
 	display: block;
 	padding: 0;
-
 }
+
+//--------------------------------------------------------------------------
+//                          To Trainers Section
+//--------------------------------------------------------------------------
+.to-trainers-section {}
+.container_to-trainers {
+	position: relative;
+	padding-top: 50px;
+}
+.to-trainers-text-group {
+	position: relative;
+	margin: 0 0 40px;
+}
+.to-trainers-text {
+	margin: 0 auto 23px 104px;
+	width: 815px;
+}
+.to-trainers-illustration {
+	position: absolute;
+	bottom: 0;
+	right: 10px;
+	left: auto;
+	top: auto;
+}
+.stages {
+	border-radius: 10px;
+	padding: 55px 55px 15px;
+	vertical-align: top;
+	display: inline-block;
+	width: 702px;
+	margin: 0 0 40px;
+	&_right {
+		padding-left: 80px;
+		padding-right: 80px;
+		.stages {
+			&__heading {
+				margin-bottom: 20px;
+			}
+			&__item {
+
+			}
+			&__icon-column {
+				width: 250px;
+				justify-content: center;
+			}
+			&__icon {
+
+			}
+			&__text-column {
+				width: 250px;
+				justify-content: center;
+			}
+			&__text {
+
+			}
+		}
+	}
+	.stages__item:nth-of-type(2n+1) {
+		.stages__icon-column {
+			order:2;
+		}
+		.stages__text-column {
+			order:1;
+		}
+	}
+	&__heading {
+		text-align: center;
+		font-size: 30px;
+		font-weight: 700;
+		margin: 0 0 40px;
+	}
+	&__item {
+		margin: 0 0 40px;
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+	}
+	&__icon-column {
+		width: 160px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	&__icon {
+		display: block;
+	}
+	&__text-column {
+		width: 430px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	&__text {
+		font-size: 20px;
+		margin: 0;
+	}
+}
+.to-trainers-stages-image {
+	vertical-align: top;
+	display: inline-block;
+	margin-left: 62px;
+}
+.to-trainers-raiting {
+	position: relative;
+	display: inline-block;
+	width: 702px;
+	vertical-align: top;
+	padding-bottom: 300px;
+	&__heading {
+		font-size: 30px;
+		font-weight: 700;
+		text-align: center;
+		margin: 55px 0 20px;
+	}
+	&__image {
+		display: block;
+		margin: 0 auto;
+		padding-left: 80px;
+	}
+	&__illustration {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+}
+
 
 //--------------------------------------------------------------------------
 //                             Media Queries
@@ -1287,6 +1416,9 @@ body {
 	}
 	.modal-button_submit:hover {
 		background-color: #da383c;
+	}
+	.section-link:hover {
+		text-decoration: underline;
 	}
 
 }
@@ -1941,6 +2073,47 @@ body {
 		margin-bottom: 0;
 		.page-buttons-area__group-heading {
 			margin-bottom: 30px;
+		}
+	}
+	.container_to-trainers {
+		padding-top: 30px;
+	}
+	.to-trainers-text {
+		font-size: 14px;
+		margin: 0 0 16px;
+		width: auto;
+	}
+	.to-trainers-text-group {
+		margin-bottom: 30px;
+	}
+	.stages {
+		display: block;
+		width: auto;
+		padding: 15px 15px 5px;
+		margin-bottom: 30px;
+		&__heading {
+			font-size: 23px;
+			margin-bottom: 30px;
+		}
+		&__item {
+			display: block;
+			margin-bottom: 30px;
+		}
+		&__icon-column {
+			width: auto;
+			justify-content: center;
+			margin: 0 0 10px;
+		}
+		&__icon {
+			max-width: 66px;
+		}
+		&__text-column {
+			width: auto;
+			display: block;
+		}
+		&__text {
+			font-size: 14px;
+
 		}
 	}
 }
