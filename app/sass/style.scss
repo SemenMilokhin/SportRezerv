@@ -485,6 +485,7 @@ body {
 		width: 702px;
 		min-height: 380px;
 		display: inline-block;
+		vertical-align: top;
 		margin: 0 0 12px 0;
 		font-size: 14px;
 		overflow: hidden;
@@ -1055,7 +1056,6 @@ body {
 	position: relative;
 	font-size: 0;
 	word-spacing: 12px;
-
 	&__group {
 		padding-top: 90px;
 		padding-bottom: 206px;
@@ -1084,6 +1084,7 @@ body {
 		color: $accent-color;
 	}
 	&__group-button {
+		min-width: 127px;
 		font-size: 14px;
 		display: inline-block;
 		background-color: $accent-color;
