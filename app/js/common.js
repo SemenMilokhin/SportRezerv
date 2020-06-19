@@ -8,6 +8,7 @@ $(document).ready(function(){
 	initMobileMenu();
 	initStickyHeader();
 	initCentersLocation();
+	initArticlesHeadings();
 	
 	function initCommonSliders() {
 		var sliders = $('.common-slider');
@@ -256,5 +257,28 @@ $(document).ready(function(){
 				}
 			} );
 		});
+	}
+	function initArticlesHeadings() {
+		var classPart = 'articles-heading',
+			headingBlocks = $( '.' + classPart );
+
+		headingBlocks.each( function( headingBlockIndex, headingBlock ) {
+			var heading        = $( headingBlock ).find( '.' + classPart + '__text' ),
+				categoriesList = $( headingBlock ).find( '.' + classPart + '__categories-list' ),
+				headingWidth   = heading.outerWidth( true ),
+				isWasReformed  = false,
+				check          = function () {
+					if ( categoriesList.outerWidth( true ) > ( $( headingBlock ).outerWidth() - headingWidth ) / 2 && !isWasReformed ) {
+						$( headingBlock ).addClass( classPart + '_no-space' );
+						isWasReformed = true;
+					} else if ( categoriesList.outerWidth( true ) <= ( $( headingBlock ).outerWidth() - headingWidth ) / 2 && isWasReformed ) {
+						$( headingBlock ).removeClass( classPart + '_no-space' );
+						isWasReformed = false;
+					}
+				};
+
+			check();
+			$( window ).on( 'resize', check );
+		} );
 	}
 });
