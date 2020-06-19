@@ -100,7 +100,7 @@ body {
 		position: absolute;
 		right: 9px;
 		top: 12px;
-		transition: 0.3s;
+		// transition: 0.3s;
 	}
 	&__label-svg-path {
 		fill: $text-color;
@@ -120,7 +120,7 @@ body {
 		z-index: -1;
 		top: 100%;
 		left: 0;
-		transition: clip 0.3s;
+		// transition: clip 0.3s;
 	}
 	&__list-item {
 		padding: 4px 18px;
@@ -1143,12 +1143,11 @@ body {
 	margin: 0 0 50px;
 }
 .scheme-locations {
-	position: relative;
 	word-spacing: 12px;
 	font-size: 0;
 	margin: 0 0 30px;
-
 	&__item {
+		position: relative;
 		word-spacing: normal;
 		display: inline-flex;
 		justify-content: center;
@@ -1160,6 +1159,11 @@ body {
 		text-align: center;
 		margin: 0 0 12px;
 		cursor: pointer;
+		&:hover {
+			.scheme-locations__hidden-part {
+				display: block;
+			}
+		}
 	}
 	&__text {
 		font-size: 20px;
@@ -1170,6 +1174,7 @@ body {
 		padding: 20px 25px;
 		font-size: 20px;
 		position: absolute;
+		z-index: 1;
 		background-color: #fff;
 		border: 1px solid $text-color;
 		border-radius: 10px;
@@ -1178,6 +1183,24 @@ body {
 		left: 0;
 		top: 0;
 		display: none;
+		&_left {
+			top: 150px;
+			left: 260px;
+			bottom: auto;
+			right: auto;
+		}
+		&_center {
+			top: 180px; 
+			left: -999px; 
+			right: -999px; 
+			margin: auto;
+		}
+		&_right {
+			top: 150px;
+			right: 260px;
+			bottom: auto;
+			left: auto;
+		}
 		&_opened {
 			display: block;
 		}
@@ -1824,7 +1847,153 @@ body {
 }
 
 //--------------------------------------------------------------------------
-//                          Need For Correct Adaptability
+//                            Gallery Section
+//--------------------------------------------------------------------------
+.gallery {
+	font-size: 0;
+	word-spacing: 12px;
+	margin: 0 0 55px;
+	&__item {
+		display: inline-block;
+		position: relative;
+		width: 702px;
+		word-spacing: normal;
+		font-size: 20px;
+		background-color: #F3F5F7;
+		border-radius: 10px;
+		margin: 0 0 12px;
+	}
+	&__cover {
+		display: inline-block;
+		margin: 0 0 14px;
+		max-height: 320px;
+		border-radius: 10px;
+		max-width: 100%;
+	}
+	&__heading {
+		font-size: 30px;
+		font-weight: 700;
+		padding: 0 25px 14px;
+		margin: 0;
+	}
+	&__type-icon {
+		position: absolute;
+		right: 12px;
+		bottom: 10px;
+		max-height: 50px;
+		max-width: 60px;
+	}
+	&__link {
+		position: absolute;
+		display: block;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+}
+.gallery-cards {
+	font-size: 0;
+	word-spacing: 12px;
+	margin: 0 0 55px;
+	&__item {
+		vertical-align: middle;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: 464px;
+		max-height: 464px;
+		font-size: 20px;
+		word-spacing: normal;
+		margin: 0 0 12px;
+	}
+	&__image {
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+
+//--------------------------------------------------------------------------
+//                               FAQ Section
+//--------------------------------------------------------------------------
+.faq {
+	margin: 0 0 25px;
+	&__list {
+		position: relative;
+		display: inline-block;
+		width: 702px;
+		border-radius: 10px;
+		background-color: #E8F6EE;
+		list-style: none;
+		padding: 30px 0;
+		margin: 0;
+		> :last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__list-item {
+		position: relative;
+		margin: 0 0 23px;
+		&:hover {
+			.faq {
+				&__question {
+					font-weight: 700;
+				}
+				&__answer {
+					display: block;
+				}
+			}
+		}
+		&_bottom {
+			position: static;
+			.faq__answer {
+				bottom: 0;
+				top: auto;
+			}
+		}
+	}
+	&__question {
+		display: block;
+		padding: 0 35px;
+		font-size: 20px;
+	}
+	&__answer {
+		width: 702px;
+		border-radius: 10px;
+		background-color: #E8F3FA;
+		padding: 30px 40px;
+		position: absolute;
+		display: none;
+		left: 714px;
+		top: -30px;
+		bottom: auto;
+		right: auto;
+		> :last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__answer-paragraph {
+		margin: 0 0 23px;
+	}
+	&__answer-list-heading {
+		margin: 0;
+	}
+	&__answer-list {
+		margin: 0 0 23px;
+		list-style: none;
+		padding: 0;
+	}
+	&__answer-list-item {
+		&::before {
+			content: '\2022';
+			display: inline-block;
+			margin-right: 2px;
+		}
+	}
+}
+
+//--------------------------------------------------------------------------
+//                      Need For Correct Adaptability
 //--------------------------------------------------------------------------
 .hidden-on-desktop {
 	display: none;
@@ -2731,8 +2900,123 @@ body {
 			border-radius: 0;
 		}
 	}
+	.gallery {
+		margin: 0 0 30px;
+		&__item {
+			width: auto;
+			display: block;
+			margin-bottom: 10px;
+		}
+		&__cover {
+			margin: 0 0 14px;
+			max-height: 170px;
+		}
+		&__heading {
+			font-size: 23px;
+			padding: 0 15px 14px;
+		}
+		&__type-icon {
+			position: absolute;
+			right: 12px;
+			bottom: 10px;
+			max-width: 36px;
+		}
+	}
+	.gallery-cards {
+		margin: 0 0 30px;
+		word-spacing: 8px;
+		&__item {
+			width: 146px;
+			max-height: 146px;
+			margin: 0 0 12px;
+		}
+		&__image {
+			max-height: 146px;
+		}
+	}
+	.faq {
+		margin-bottom: 38px;
+		&__list {
+			width: auto;
+			display: block;
+			padding-bottom: 0;
+			> :last-child {
+				&:hover {
+					.faq__question {
+						padding-bottom: 20px;
 
+					}
+				}
+				.faq__question {
+					padding-bottom: 30px;
 
+				}
+				.faq__answer::before {
+					height: 10px;
+				}
+				.faq__answer::after {
+					content: none;
+				}
+			}
+		}
+		&__list-item {
+			margin: 0 0 16px;
+			font-size: 14px;
+
+			&_bottom {
+
+			}
+		}
+		&__question {
+			font-size: 14px;
+			padding: 0 22px;
+		}
+		&__answer {
+			padding: 0;
+			position: relative;
+			left: auto;
+			right: auto;
+			bottom: auto;
+			top: auto;
+			width: auto;
+			background-color: #fff;
+			border-radius: 0;
+			&::before {
+				content: '';
+				display: block;
+				width: auto;
+				height: 30px;
+				margin-bottom: 15px;
+				border-radius: 0 0 10px 10px;
+				background-color: #E8F6EE;
+			}
+			&::after {
+				content: '';
+				display: block;
+				width: auto;
+				height: 14px;
+				margin-top: 15px;
+				border-radius: 10px 10px 0 0;
+				background-color: #E8F6EE;
+			}
+		}
+		&__answer-paragraph {
+			padding: 0 22px;
+		}
+		&__answer-list-heading {
+
+			padding: 0 22px;
+
+		}
+		&__answer-list {
+
+			padding: 0 22px;
+
+		}
+		&__answer-list-item {
+
+		}
+	}
 	.hidden-on-mobile {
 		display: none;
 	}

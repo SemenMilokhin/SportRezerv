@@ -9,6 +9,7 @@ $(document).ready(function(){
 	initStickyHeader();
 	initCentersLocation();
 	initArticlesHeadings();
+	initFAQ();
 	
 	function initCommonSliders() {
 		var sliders = $('.common-slider');
@@ -279,6 +280,19 @@ $(document).ready(function(){
 
 			check();
 			$( window ).on( 'resize', check );
+		} );
+	}
+	function initFAQ() {
+		var classPart = 'faq';
+		$( '.' + classPart ).each( function( faqIndex, faq ) {
+			var items     = $( faq ).find( '.' + classPart + '__list-item' ),
+				faqHeigth = $( faq ).outerHeight();
+
+			items.each( function( itemIndex, item) {
+				if ( faqHeigth - $(item).position().top < $(item).find( '.' + classPart + '__answer' ).outerHeight() ) {
+					$(item).addClass( classPart + '__list-item_bottom' );
+				}
+			} );
 		} );
 	}
 });
