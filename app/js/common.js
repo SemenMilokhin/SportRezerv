@@ -11,7 +11,6 @@ $(document).ready(function(){
 	initArticlesHeadings();
 	initFAQ();
 	initGallery();
-
 	
 	function initCommonSliders() {
 		var sliders = $('.common-slider');

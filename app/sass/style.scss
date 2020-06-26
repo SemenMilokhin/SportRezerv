@@ -18,9 +18,17 @@ body {
 	line-height: 1.15;
 	font-weight: 400;
 	color: $text-color;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: flex-start;
 	&.no-scroll, &.opened-menu {
 		overflow: hidden;
 	}
+}
+.main-content {
+	flex-grow: 1;
 }
 .container {
 	margin: 0 auto;
@@ -306,6 +314,89 @@ body {
 		color: $text-color;
 		&_current-page {
 			color: $accent-color;
+		}
+	}
+	&__drop-down {
+		display: none;
+		position: relative;
+		word-spacing: normal;
+		&:hover {
+			.header-navigation__drop-down {
+				&-label {
+					color: $accent-color;
+					&::after {
+						transform: rotate(180deg);
+					}
+				}
+				&-list {
+					display: block;
+				}
+			}
+		}
+		&-label {
+			display: inline-block;
+			font-size: 14px;
+			color: $text-color;
+			cursor: pointer;
+			position: relative;
+			padding-right: 25px;
+			&::after {
+				content: '';
+				position: absolute;
+				left: auto;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				display: block;
+				width: 12px;
+				height: 6px;
+				background-size: 12px 6px;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6' width='10' height='6' fill='%23333'%3e%3cpath class='select__label-svg-path' d='M5.7,5.7C5.5,5.9,5.3,6,5,6S4.5,5.9,4.3,5.7l-4-4c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0L5,3.6l3.3-3.3c0.4-0.4,1-0.4,1.4,0c0.4,0.4,0.4,1,0,1.4L5.7,5.7z'/%3e%3c/svg%3e");
+			}
+		}
+		&-list {
+			font-size: 14px;
+			position: absolute;
+			z-index: 1;
+			top: 100%;
+			left: -12px;
+			right: auto;
+			bottom: auto;
+			display: none;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			background-color: #fff;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+			> .header-navigation__drop-down-list-item:last-of-type::after {
+				content: none;
+			} 
+		}
+		&-list-item {
+			display: block;
+			position: relative;
+			&::after {
+				content: '';
+				display: block;
+				height: 1px;
+				background-color: #ccc;
+			}
+		}
+		&-link {
+			display: block;
+			min-width: 140px;
+			padding: 0 12px;
+			white-space: nowrap;
+			text-decoration: none;
+			color: $text-color;
+			padding-top: 8px;
+			padding-bottom: 7px;
+			&_current-page {
+				color: $accent-color;
+			}
 		}
 	}
 }
@@ -2124,6 +2215,9 @@ body {
 	.articles__link:hover {
 		text-decoration: underline;
 	}
+	.header-navigation__drop-down-link:hover {
+		color: $accent-color;
+	}
 }
 @media (min-width: 980px) and (max-width: 1140px) {
 	.advantages-inline {
@@ -2141,7 +2235,13 @@ body {
 	.header-navigation {
 		padding-left: 15px;
 		padding-right: 15px;
-		word-spacing: 35px;
+		word-spacing: 23px;
+		&__link_tablet-disable {
+			display: none;
+		}
+		&__drop-down {
+			display: inline-block;
+		}
 	}
 	.header-buttons {
 		margin-left: 15px;
@@ -2266,22 +2366,17 @@ body {
 		font-size: 40px;
 	}
 	.container_footer {
-		justify-content: center;
+		justify-content: flex-end;
 	}
 	.footer-navigation {
 		padding: 19px 0;
-	}
-	.footer-location {
-		margin-left: 60px;
-		padding: 19px 0;
-	}
-	.footer-social {
-		padding: 23px 0;
+		position: relative;
 		width: 100%;
-		&::before {
+		text-align: center;
+		&::after {
 			content: '';
 			position: absolute;
-			top: 0;
+			top: 100%;
 			left: -9999px;
 			right: -9999px;
 			margin: auto;
@@ -2289,6 +2384,14 @@ body {
 			height: 1px;
 			background-color: #262727;
 		}
+	}
+	.footer-location {
+		padding: 22px 0;
+		margin-right: 35px;
+	}
+	.footer-social {
+		padding: 22px 0 21px;
+		margin-right: 40px;
 	}
 }
 @media (max-width: 979px) {
