@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="sass/style.scss">
 	<title>Document</title>
 </head>
 <body>
@@ -63,7 +63,7 @@
 			<nav class="mobile-menu__navigation">
 				<a href="#" class="mobile-menu__navigation-link">О проекте</a>
 				<a href="#" class="mobile-menu__navigation-link">Родителям</a>
-				<a href="#" class="mobile-menu__navigation-link">Тренерам</a>
+				<span class="mobile-menu__navigation-link mobile-menu__navigation-link_current-page">Тренерам</span>
 				<a href="#" class="mobile-menu__navigation-link">Статьи</a>
 				<a href="#" class="mobile-menu__navigation-link">Технологии</a>
 				<a href="#" class="mobile-menu__navigation-link">Галерея</a>
@@ -150,65 +150,93 @@
 		</div>
 	</header>
 	<main class="main-content">
-		<section class="news-section">
-			<div class="container container_news">
+		<section class="to-trainers-section">
+			<div class="container container_to-trainers">
 				<img src="img/page-illustration.png" alt="" class="page-illustration">
-				<div class="articles-heading">
-					<div class="articles-heading__wrapper">
-						<h1 class="articles-heading__text">Галерея</h1>
-						<ul class="articles-heading__categories-list">
-							<li class="articles-heading__category">
-								<a href="#" class="articles-heading__category-link">Все</a>
-							</li>
-							<li class="articles-heading__category">
-								<a href="#" class="articles-heading__category-link">Фотограции</a>
-							</li>
-							<li class="articles-heading__category">
-								<a href="#" class="articles-heading__category-link">Видео</a>
-							</li>
-						</ul>
+				<h1 class="page-heading">Тренерам</h1>
+				<h2 class="section-heading">Комплексное тестирование спортсменов<br>начального и тренировочного этапов подготовки</h2>
+				<div class="to-trainers-text-group">
+					<p class="to-trainers-text">Регулярный комплексный контроль стал неотъемлемой частью современного тренировочного процесса. Оценка текущего функционального состояния организма спортсменов и его своевременная коррекция лежат в основе эффективной подготовки и успешных выступлений в соревнованиях в любом виде спорта.</p>
+					<p class="to-trainers-text">Тестирование в рамках городской программы «Помощь родителям в выборе вида спорта для детей» позволяет не только определить таланты и индивидуальные особенности каждого ребенка в самом начале занятий спортом, но и регулярно отслеживать динамику развития его способностей, уровень тренированности и утомления. Тренер получает полную картину состояния подготовленности своих подопечных как индивидуально, так и по всей группе.</p>
+					<img src="img/to-trainers-illustration.png" alt="" class="to-trainers-illustration hidden-on-mobile">
+				</div>
+				<h2 class="section-heading">Запись тренеровочных групп производится <br>по телефону <a href="#" class="section-link">+7&nbsp;495&nbsp;7881111</a></h2>
+				<div class="stages" style="background-color: #E8F6EE;">
+					<h3 class="stages__heading">Индивидуальное<br>заключение</h3>
+					<div class="stages__item">
+						<div class="stages__icon-column">
+							<img src="img/stages-icon-1.png" alt="" class="stages__icon">
+						</div>
+						<div class="stages__text-column">
+							<p class="stages__text">Показатели свойств внимания<br>Зрительно-моторная реакция<br>Тип темперамента</p>
+						</div>
+					</div>
+					<div class="stages__item">
+						<div class="stages__icon-column">
+							<img src="img/stages-icon-2.png" alt="" class="stages__icon">
+						</div>
+						<div class="stages__text-column">
+							<p class="stages__text">Скелетно-мышечная масса<br>Биологический возраст<br>Уровень физического развития</p>
+						</div>
+					</div>
+					<div class="stages__item">
+						<div class="stages__icon-column">
+							<img src="img/stages-icon-3.png" alt="" class="stages__icon">
+						</div>
+						<div class="stages__text-column">
+							<p class="stages__text">Адаптационные возможности организма<br>Устойчивость к физическим нагрузкам</p>
+						</div>
+					</div>
+					<div class="stages__item">
+						<div class="stages__icon-column">
+							<img src="img/stages-icon-4.png" alt="" class="stages__icon">
+						</div>
+						<div class="stages__text-column">
+							<p class="stages__text">Перспективность в виде спорта<br>Индивидуальный профиль спортсмена</p>
+						</div>
 					</div>
 				</div>
-				<div class="gallery">
-					<div class="gallery__item">
-						<img src="img/gallery-cover.jpg" alt="" class="gallery__cover">
-						<h2 class="gallery__heading">Заголовок галереи</h2>
-						<img src="img/gallery-type-photo.png" alt="" class="gallery__type-icon">
-						<a href="#" class="gallery__link"></a>
-					</div>
-					<div class="gallery__item">
-						<img src="img/gallery-cover.jpg" alt="" class="gallery__cover">
-						<h2 class="gallery__heading">Заголовок галереи</h2>
-						<img src="img/gallery-type-video.png" alt="" class="gallery__type-icon">
-						<a href="#" class="gallery__link"></a>
-					</div>
-					<div class="gallery__item">
-						<img src="img/gallery-cover.jpg" alt="" class="gallery__cover">
-						<h2 class="gallery__heading">Заголовок галереи</h2>
-						<img src="img/gallery-type-photo.png" alt="" class="gallery__type-icon">
-						<a href="#" class="gallery__link"></a>
-					</div>
-					<div class="gallery__item">
-						<img src="img/gallery-cover.jpg" alt="" class="gallery__cover">
-						<h2 class="gallery__heading">Заголовок галереи</h2>
-						<img src="img/gallery-type-video.png" alt="" class="gallery__type-icon">
-						<a href="#" class="gallery__link"></a>
-					</div>
-					<div class="gallery__item">
-						<img src="img/gallery-cover.jpg" alt="" class="gallery__cover">
-						<h2 class="gallery__heading">Заголовок галереи</h2>
-						<img src="img/gallery-type-photo.png" alt="" class="gallery__type-icon">
-						<a href="#" class="gallery__link"></a>
-					</div>
-					<div class="gallery__item">
-						<img src="img/gallery-cover.jpg" alt="" class="gallery__cover">
-						<h2 class="gallery__heading">Заголовок галереи</h2>
-						<img src="img/gallery-type-video.png" alt="" class="gallery__type-icon">
-						<a href="#" class="gallery__link"></a>
-					</div>
+				<img class="to-trainers-stages-image hidden-on-mobile" src="img/to-trainers-stages-image.png" alt="">
+				<h2 class="section-heading">Оценка результатов тестирования производится<br>по оценочным шкалам в соответствии<br>с возрастом ребенка</h2>
+				<div class="to-trainers-raiting hidden-on-mobile">
+					<h3 class="to-trainers-raiting__heading">Рейтинг внутри тренировочной <br>группы</h3>
+					<img src="img/to-trainers-raiting-image.png" alt="" class="to-trainers-raiting__image">
+					<img src="img/to-trainers-raiting-illustration.png" alt="" class="to-trainers-raiting__illustration">
 				</div>
-				<div class="load-more-btn-wrapper">
-					<button class="load-more-btn">Загрузить ещё...</button>
+				<div class="stages stages_right" style="background-color: #E8F3FA;">
+					<h3 class="stages__heading">Заключение по <br>тренировочной группе</h3>
+					<div class="stages__item">
+						<div class="stages__icon-column">
+							<img src="img/stages-icon-5.png" alt="" class="stages__icon">
+						</div>
+						<div class="stages__text-column">
+							<p class="stages__text">Рейтинг по ключевым показателям в группе</p>
+						</div>
+					</div>
+					<div class="stages__item">
+						<div class="stages__icon-column">
+							<img src="img/stages-icon-6.png" alt="" class="stages__icon">
+						</div>
+						<div class="stages__text-column">
+							<p class="stages__text">Итоговый рейтинг спортсменов в группе</p>
+						</div>
+					</div>
+					<div class="stages__item">
+						<div class="stages__icon-column">
+							<img src="img/stages-icon-7.png" alt="" class="stages__icon">
+						</div>
+						<div class="stages__text-column">
+							<p class="stages__text">Оценка готовности к&nbsp;соревнованиям</p>
+						</div>
+					</div>
+					<div class="stages__item">
+						<div class="stages__icon-column">
+							<img src="img/stages-icon-8.png" alt="" class="stages__icon">
+						</div>
+						<div class="stages__text-column">
+							<p class="stages__text">Рекомендации по тренировочному режиму</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -241,8 +269,6 @@
 			</nav>
 		</div>
 	</footer>
-
-	<script src="js/jquery.min.js"></script>
-	<script src="js/common.js"></script>
+	<script type="module" src="js/main.js"></script>
 </body>
 </html>

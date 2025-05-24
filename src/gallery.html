@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="sass/style.scss">
 	<title>Document</title>
 </head>
 <body>
@@ -153,37 +153,62 @@
 		<section class="news-section">
 			<div class="container container_news">
 				<img src="img/page-illustration.png" alt="" class="page-illustration">
-				<h1 class="page-heading">Заголовок статьи</h1>
-				<p class="articles-single-data">Статьи. Категория статьи. Дата статьи </p>
-				<div class="articles-single">
-					<img src="img/articles-single-image.jpg" alt="">
-					<p>Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости. Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости.</p>
-					<p>Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости. Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости.</p>
-					<p>Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости. Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости.</p>
-					<p>Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости. Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости.</p>
-					<p>Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости. </p>
+				<div class="articles-heading">
+					<div class="articles-heading__wrapper">
+						<h1 class="articles-heading__text">Галерея</h1>
+						<ul class="articles-heading__categories-list">
+							<li class="articles-heading__category">
+								<a href="#" class="articles-heading__category-link">Все</a>
+							</li>
+							<li class="articles-heading__category">
+								<a href="#" class="articles-heading__category-link">Фотограции</a>
+							</li>
+							<li class="articles-heading__category">
+								<a href="#" class="articles-heading__category-link">Видео</a>
+							</li>
+						</ul>
+					</div>
 				</div>
-				<div class="another-articles">
-					<div class="another-articles__item">
-						<h3 class="another-articles__heading">Заголовок статьи</h3>
-						<a href="#" class="another-articles__link"></a>
+				<div class="gallery">
+					<div class="gallery__item">
+						<img src="img/gallery-cover.jpg" alt="" class="gallery__cover">
+						<h2 class="gallery__heading">Заголовок галереи</h2>
+						<img src="img/gallery-type-photo.png" alt="" class="gallery__type-icon">
+						<a href="#" class="gallery__link"></a>
 					</div>
-					<div class="another-articles__item">
-						<h3 class="another-articles__heading">Заголовок статьи</h3>
-						<a href="#" class="another-articles__link"></a>
+					<div class="gallery__item">
+						<img src="img/gallery-cover.jpg" alt="" class="gallery__cover">
+						<h2 class="gallery__heading">Заголовок галереи</h2>
+						<img src="img/gallery-type-video.png" alt="" class="gallery__type-icon">
+						<a href="#" class="gallery__link"></a>
 					</div>
-					<div class="another-articles__item">
-						<h3 class="another-articles__heading">Заголовок статьи</h3>
-						<a href="#" class="another-articles__link"></a>
+					<div class="gallery__item">
+						<img src="img/gallery-cover.jpg" alt="" class="gallery__cover">
+						<h2 class="gallery__heading">Заголовок галереи</h2>
+						<img src="img/gallery-type-photo.png" alt="" class="gallery__type-icon">
+						<a href="#" class="gallery__link"></a>
 					</div>
-					<div class="another-articles__item">
-						<h3 class="another-articles__heading">Заголовок статьи</h3>
-						<a href="#" class="another-articles__link"></a>
+					<div class="gallery__item">
+						<img src="img/gallery-cover.jpg" alt="" class="gallery__cover">
+						<h2 class="gallery__heading">Заголовок галереи</h2>
+						<img src="img/gallery-type-video.png" alt="" class="gallery__type-icon">
+						<a href="#" class="gallery__link"></a>
 					</div>
-					<div class="another-articles__item">
-						<h3 class="another-articles__heading">Заголовок статьи</h3>
-						<a href="#" class="another-articles__link"></a>
+					<div class="gallery__item">
+						<img src="img/gallery-cover.jpg" alt="" class="gallery__cover">
+						<h2 class="gallery__heading">Заголовок галереи</h2>
+						<img src="img/gallery-type-photo.png" alt="" class="gallery__type-icon">
+						<a href="#" class="gallery__link"></a>
 					</div>
+					<div class="gallery__item">
+						<img src="img/gallery-cover.jpg" alt="" class="gallery__cover">
+						<h2 class="gallery__heading">Заголовок галереи</h2>
+						<img src="img/gallery-type-video.png" alt="" class="gallery__type-icon">
+						<a href="#" class="gallery__link"></a>
+					</div>
+				</div>
+				<div class="load-more-btn-wrapper">
+					<button class="load-more-btn">Загрузить ещё...</button>
 				</div>
 			</div>
 		</section>
@@ -216,8 +241,6 @@
 			</nav>
 		</div>
 	</footer>
-
-	<script src="js/jquery.min.js"></script>
-	<script src="js/common.js"></script>
+	<script type="module" src="js/main.js"></script>
 </body>
 </html>

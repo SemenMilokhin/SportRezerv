@@ -4,8 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
-	<link rel="stylesheet" href="css/slick.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="sass/style.scss">
 	<title>Document</title>
 </head>
 <body>
@@ -62,7 +61,7 @@
 		<div class="container container_mobile-menu-content">
 			<img src="img/pri_podd.png" alt="" class="mobile-menu__image">
 			<nav class="mobile-menu__navigation">
-				<span class="mobile-menu__navigation-link mobile-menu__navigation-link_current-page">О проекте</span>
+				<a href="#" class="mobile-menu__navigation-link">О проекте</a>
 				<a href="#" class="mobile-menu__navigation-link">Родителям</a>
 				<a href="#" class="mobile-menu__navigation-link">Тренерам</a>
 				<a href="#" class="mobile-menu__navigation-link">Статьи</a>
@@ -151,83 +150,65 @@
 		</div>
 	</header>
 	<main class="main-content">
-		<section class="about-section">
-			<div class="container container_about">
+		<section class="news-section">
+			<div class="container container_news">
 				<img src="img/page-illustration.png" alt="" class="page-illustration">
-				<h1 class="page-heading">О проекте</h1>
-				<h2 class="page-subheading">Городская программа «Помощь родителям в выборе вида спорта для детей» действует с октября 2016 года</h2>
-				<p class="page-text">Возникновению проекта предшествовал опрос жителей города Москвы (более 200 тысяч) на портале «Активный гражданин»</p>
-				<div class="counter">
-					<h3 class="counter__heading">Кто должен выбирать секции для детей?</h3>
-					<div class="counter__items-wrapper">
-						<div class="counter__item">
-							<p class="counter__item-heading">Родители</p>
-							<p class="counter__item-value">18,47%</p>
-						</div>
-						<div class="counter__item">
-							<p class="counter__item-heading">Должно быть сочетание двух подходов</p>
-							<p class="counter__item-value">66,09%</p>
-						</div>
-						<div class="counter__item">
-							<p class="counter__item-heading">Специалисты</p>
-							<p class="counter__item-value">12,24%</p>
-						</div>
-					</div>
-					<img src="img/counter-illustration-left.png" alt="" class="counter__illustration counter__illustration_left">
-					<img src="img/counter-illustration-right.png" alt="" class="counter__illustration counter__illustration_right">
-				</div>
-				<div class="cards-wrapper">
-					<div class="card" style="background-color: #E8F3FA;">
-						<p class="card__text">Тестирование проводится в 11 центрах по Москве и занимает менее 2 часов</p>
-						<img src="img/card-illustration-1.png" alt="" class="card__illustration">
-						<img src="img/card-illustration-1-mobile.png" alt="" class="card__mobile-illustration">
-					</div>
-					<div class="card" style="background-color: #C2E2F9;">
-						<p class="card__text">Методика рассчитана на детей<br>в возрасте от 5,5 до 12 лет<br>вне зависимости от наличия<br>и уровня спортивной подготовленности</p>
-						<img src="img/card-illustration-2.png" alt="" class="card__illustration">
-						<img src="img/card-illustration-2-mobile.png" alt="" class="card__mobile-illustration">
+				<div class="articles-heading">
+					<div class="articles-heading__wrapper">
+						<h1 class="articles-heading__text">Статьи</h1>
+						<ul class="articles-heading__categories-list">
+							<li class="articles-heading__category">
+								<a href="#" class="articles-heading__category-link">Все</a>
+							</li>
+							<li class="articles-heading__category">
+								<a href="#" class="articles-heading__category-link">Популярные</a>
+							</li>
+							<li class="articles-heading__category">
+								<a href="#" class="articles-heading__category-link">Научные</a>
+							</li>
+						</ul>
 					</div>
 				</div>
-				<div class="common-slider common-slider_autoplay">
-					<div class="common-slider__slides">
-						<div class="agitation common-slider__slide">
-							<h2 class="agitation__heading">«Ребёнок теряет интерес к тренировкам и соревнованиям! Какой вид спорта попробовать?»</h2>
-							<p class="agitation__text">Далеко не всегда причиной потери интереса становится недопонимание в команде или неудобное расписание тренировок. Если Вы видите, что ребёнок скован на соревнованиях, то самое время выяснить, способствует ли его темперамент уверенным выступлениям в выбранном виде спорта</p>
-							<img src="img/agitation-illustration.png" alt="" class="agitation__illustration">
-						</div>
-						<div class="agitation common-slider__slide">
-							<h2 class="agitation__heading">«Ребёнок теряет интерес к тренировкам и соревнованиям! Какой вид спорта попробовать?»</h2>
-							<p class="agitation__text">Далеко не всегда причиной потери интереса становится недопонимание в команде или неудобное расписание тренировок. Если Вы видите, что ребёнок скован на соревнованиях, то самое время выяснить, способствует ли его темперамент уверенным выступлениям в выбранном виде спорта</p>
-							<img src="img/agitation-illustration.png" alt="" class="agitation__illustration">
-						</div>
+				<div class="articles">
+					<div class="articles__item">
+						<img class="articles__image" src="img/article-image.jpg" alt="">
+						<h3 class="articles__heading">Заголовок статьи</h3>
+						<p class="articles__text">Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости...</p>
+						<a href="#" class="articles__link">Подробнее</a>
 					</div>
-					<div class="common-slider__controls">
-						<button class="common-slider__arrow common-slider__arrow_prev"></button>
-						<button class="common-slider__arrow common-slider__arrow_next"></button>
+					<div class="articles__item">
+						<img class="articles__image" src="img/article-image.jpg" alt="">
+						<h3 class="articles__heading">Заголовок статьи</h3>
+						<p class="articles__text">Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости...</p>
+						<a href="#" class="articles__link">Подробнее</a>
+					</div>
+					<div class="articles__item">
+						<img class="articles__image" src="img/article-image.jpg" alt="">
+						<h3 class="articles__heading">Заголовок статьи</h3>
+						<p class="articles__text">Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости...</p>
+						<a href="#" class="articles__link">Подробнее</a>
+					</div>
+					<div class="articles__item">
+						<img class="articles__image" src="img/article-image.jpg" alt="">
+						<h3 class="articles__heading">Заголовок статьи</h3>
+						<p class="articles__text">Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости...</p>
+						<a href="#" class="articles__link">Подробнее</a>
+					</div>
+					<div class="articles__item">
+						<img class="articles__image" src="img/article-image.jpg" alt="">
+						<h3 class="articles__heading">Заголовок статьи</h3>
+						<p class="articles__text">Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости...</p>
+						<a href="#" class="articles__link">Подробнее</a>
+					</div>
+					<div class="articles__item">
+						<img class="articles__image" src="img/article-image.jpg" alt="">
+						<h3 class="articles__heading">Заголовок статьи</h3>
+						<p class="articles__text">Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости...</p>
+						<a href="#" class="articles__link">Подробнее</a>
 					</div>
 				</div>
-				<div class="cards-wrapper">
-					<div class="card" style="background-color: #E8F6EE;">
-						<p class="card__text">По завершению тестирования проводится интерпретация полученных результатов <br>с уточнением, на что необходимо обратить внимание и почему рекомендованы конкретные виды спорта</p>
-						<img src="img/card-illustration-3.png" alt="" class="card__illustration">
-						<img src="img/card-illustration-3-mobile.png" alt="" class="card__mobile-illustration">
-					</div>
-					<div class="card" style="background-color: #FFF9EB;">
-						<p class="card__text">Во время тестирования определяются психофизиологические особенности, проводятся антропометрические измерения и оценивается уровень развития физических качеств, всего более 50 различных показателей</p>
-						<img src="img/card-illustration-4.png" alt="" class="card__illustration">
-						<img src="img/card-illustration-4-mobile.png" alt="" class="card__mobile-illustration">
-					</div>
-				</div>
-				<div class="page-buttons-area">
-					<div class="page-buttons-area__group">
-						<h3 class="page-buttons-area__group-heading">Запись осуществляется <br>на портале <a href="#" class="page-buttons-area__group-heading-link">mos.ru</a></h3>
-						<a href="#" class="page-buttons-area__group-button" data-modal="reserve">Записаться</a>
-					</div>
-					<img src="img/page-buttons-area-illustration.png" alt="" class="page-buttons-area__illustration">
-					<div class="page-buttons-area__group">
-						<h3 class="page-buttons-area__group-heading">Самостоятельное тестирование<br>в домашних условиях</h3>
-						<a href="#" class="page-buttons-area__group-button">Пройти</a>
-					</div>
+				<div class="load-more-btn-wrapper">
+					<button class="load-more-btn">Загрузить ещё...</button>
 				</div>
 			</div>
 		</section>
@@ -260,9 +241,6 @@
 			</nav>
 		</div>
 	</footer>
-
-	<script src="js/jquery.min.js"></script>
-	<script src="js/slick.min.js"></script>
-	<script src="js/common.js"></script>
+	<script type="module" src="js/main.js"></script>
 </body>
 </html>

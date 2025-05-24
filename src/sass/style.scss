@@ -1,3 +1,4 @@
+@use '../../node_modules/slick-carousel/slick/slick.scss';
 //--------------------------------------------------------------------------
 //                                  Colors
 //--------------------------------------------------------------------------
@@ -934,12 +935,6 @@ body {
 	&_opened {
 		display: block;
 	}
-	&_reserve {
-
-	}
-	&_vacancies {
-
-	}
 }
 .modal-window-close-btn {
 	top: 6px;
@@ -1018,15 +1013,9 @@ body {
 	padding: 10px 20px 9px;
 	cursor: pointer;
 	outline: none;
-	&_add-file {
-
-	}
 	&_submit {
 		background-color: $accent-color;
 		color: #fff;
-	}
-	&_cancel {
-
 	}
 }
 .modal-label {
@@ -2251,7 +2240,6 @@ body {
 		min-height: 580px;
 	}
 	.advantages__image {
-		left: 0;
 		right: 0;
 		margin: auto;
 		max-height: 300px;
@@ -2467,9 +2455,6 @@ body {
 		margin-bottom: 10px;
 		width: 300px;
 		padding: 10px 15px 210px;
-		h2 {
-			
-		}
 	}
 	.advantages__image {
 		max-width: 270px;
@@ -2796,9 +2781,6 @@ body {
 		&__separator {
 			height: 1px;
 			background-color: #cbd3e0;;
-		}
-		&__navigation {
-
 		}
 		&__navigation-link {
 			display: block;

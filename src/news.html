@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="sass/style.scss">
 	<title>Document</title>
 </head>
 <body>
@@ -155,54 +155,87 @@
 				<img src="img/page-illustration.png" alt="" class="page-illustration">
 				<div class="articles-heading">
 					<div class="articles-heading__wrapper">
-						<h1 class="articles-heading__text">Статьи</h1>
+						<h1 class="articles-heading__text">Новости</h1>
 						<ul class="articles-heading__categories-list">
 							<li class="articles-heading__category">
 								<a href="#" class="articles-heading__category-link">Все</a>
 							</li>
 							<li class="articles-heading__category">
-								<a href="#" class="articles-heading__category-link">Популярные</a>
-							</li>
-							<li class="articles-heading__category">
-								<a href="#" class="articles-heading__category-link">Научные</a>
+								<div class="articles-heading__subcategories">
+									<span class="articles-heading__subcategories-list-heading">Мероприятия</span>
+									<ul class="articles-heading__subcategories-list">
+										<li class="articles-heading__subcategory">
+											<div class="articles-heading__articles">
+												<span class="articles-heading__articles-list-heading">Афиша</span>
+												<ul class="articles-heading__articles-list">
+													<li class="articles-heading__article">
+														<a href="#" class="articles-heading__article-link">
+															05.09 День города
+														</a>
+													</li>
+													<li class="articles-heading__article">
+														<a href="#" class="articles-heading__article-link">
+															12.04 Выставка Московский двор
+														</a>
+													</li>
+													<li class="articles-heading__article">
+														<a href="#" class="articles-heading__article-link">
+															25.10 Выставка Мир детсва
+														</a>
+													</li>
+													<li class="articles-heading__article">
+														<a href="#" class="articles-heading__article-link">
+															05.09 День города
+														</a>
+													</li>
+													<li class="articles-heading__article">
+														<a href="#" class="articles-heading__article-link">
+															12.04 Выставка Московский двор
+														</a>
+													</li>
+													<li class="articles-heading__article">
+														<a href="#" class="articles-heading__article-link">
+															25.10 Выставка Мир детсва
+														</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="articles-heading__subcategory">
+											<a href="#" class="articles-heading__subcategory-link">Прошедшие</a>
+										</li>
+									</ul>
+								</div>
 							</li>
 						</ul>
 					</div>
 				</div>
+				<div class="articles-banner">
+					<img class="articles-banner__image" src="img/banner-image.jpg" alt="">
+					<h2 class="articles-banner__text hidden-on-mobile">27 июля наш проект учавствовал на празднике “Московского спорта”</h2>
+				</div>
 				<div class="articles">
 					<div class="articles__item">
 						<img class="articles__image" src="img/article-image.jpg" alt="">
-						<h3 class="articles__heading">Заголовок статьи</h3>
+						<h3 class="articles__heading">Заголовок новости</h3>
 						<p class="articles__text">Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости...</p>
 						<a href="#" class="articles__link">Подробнее</a>
 					</div>
 					<div class="articles__item">
 						<img class="articles__image" src="img/article-image.jpg" alt="">
-						<h3 class="articles__heading">Заголовок статьи</h3>
+						<h3 class="articles__heading">Заголовок новости</h3>
 						<p class="articles__text">Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости...</p>
 						<a href="#" class="articles__link">Подробнее</a>
 					</div>
 					<div class="articles__item">
 						<img class="articles__image" src="img/article-image.jpg" alt="">
-						<h3 class="articles__heading">Заголовок статьи</h3>
+						<h3 class="articles__heading">Заголовок новости</h3>
 						<p class="articles__text">Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости...</p>
 						<a href="#" class="articles__link">Подробнее</a>
 					</div>
 					<div class="articles__item">
 						<img class="articles__image" src="img/article-image.jpg" alt="">
-						<h3 class="articles__heading">Заголовок статьи</h3>
-						<p class="articles__text">Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости...</p>
-						<a href="#" class="articles__link">Подробнее</a>
-					</div>
-					<div class="articles__item">
-						<img class="articles__image" src="img/article-image.jpg" alt="">
-						<h3 class="articles__heading">Заголовок статьи</h3>
-						<p class="articles__text">Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости...</p>
-						<a href="#" class="articles__link">Подробнее</a>
-					</div>
-					<div class="articles__item">
-						<img class="articles__image" src="img/article-image.jpg" alt="">
-						<h3 class="articles__heading">Заголовок статьи</h3>
+						<h3 class="articles__heading">Заголовок новости</h3>
 						<p class="articles__text">Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости...</p>
 						<a href="#" class="articles__link">Подробнее</a>
 					</div>
@@ -241,8 +274,6 @@
 			</nav>
 		</div>
 	</footer>
-
-	<script src="js/jquery.min.js"></script>
-	<script src="js/common.js"></script>
+	<script type="module" src="js/main.js"></script>
 </body>
 </html>

@@ -1,3 +1,6 @@
+import $ from 'jquery';
+import 'slick-carousel/slick/slick.min.js';
+
 $(document).ready(function(){
 	initCommonSliders();
 	initSelects();
@@ -135,7 +138,7 @@ $(document).ready(function(){
 	}
 	function initMinimap() {
 		if ($('map').length > 0) {
-			$('map').imageMapResize();
+			$('map').resize();
 		}
 
 		var mapWrapper = $('.minimap'),
