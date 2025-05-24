@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+	<title>Document</title>
+  <script type="module" crossorigin src="/SportRezerv/js/main.js"></script>
+  <link rel="stylesheet" crossorigin href="/SportRezerv/assets/stylesheets/main.css">
+</head>
+<body>
+	<div class="modal-windows">
+		<div class="modal-substrate"></div>
+		<div class="modal-window modal-window_reserve" data-type-of-modal-window="reserve">
+			<button class="modal-window-close-btn"><svg class="modal-window-close-btn__icon" viewBox="0 0 329.3 329"><path d="m194.8 164.8 128.2-128.2c8.3-8.3 8.3-21.8 0-30.2-8.3-8.3-21.8-8.3-30.2 0l-128.2 128.2-128.2-128.2c-8.3-8.3-21.8-8.3-30.2 0-8.3 8.3-8.3 21.8 0 30.2l128.2 128.2-128.2 128.2c-8.3 8.3-8.3 21.8 0 30.2 4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2l128.2-128.2 128.2 128.2c4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2 8.3-8.3 8.3-21.8 0-30.2zm0 0"/></svg></button>
+			<h2 class="modal-heading">Обратная связь</h2>
+			<form class="modal-form" action="">
+				<input class="modal-input" type="text" placeholder="ФИО">
+				<input class="modal-input" type="text" placeholder="Эл. почта">
+				<input class="modal-input" type="text" placeholder="Телефон">
+				<div class="select select_modal">
+					<button class="select__label">
+						<span class="select__label-value">Выберите тему</span>
+						<svg class="select__label-svg" width="10" height="6" viewBox="0 0 10 6">
+							<path class="select__label-svg-path" d="M5.7,5.7C5.5,5.9,5.3,6,5,6S4.5,5.9,4.3,5.7l-4-4c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0L5,3.6l3.3-3.3c0.4-0.4,1-0.4,1.4,0c0.4,0.4,0.4,1,0,1.4L5.7,5.7z"/>
+						</svg>
+					</button>
+					<input type="hidden" class="select__hidden-input" name="theme" id="theme-field">
+					<ul class="select__list">
+						<li class="select__list-item" data-value="Theme-1">Тема 1</li>
+						<li class="select__list-item" data-value="Theme-2">Тема 2</li>
+						<li class="select__list-item" data-value="Theme-3">Тема 3</li>
+					</ul>
+				</div>
+				<textarea class="modal-textarea" placeholder="Сообщение"></textarea>
+				<div class="modal-add-file-area">
+					<button class="modal-button modal-button_add-file">Прикрепить файл</button>
+					<span class="modal-label">Файл объёмом до 10 Мб</span>
+				</div>
+				<div class="modal-buttons-area">
+					<button class="modal-button modal-button_submit">Отправить</button>
+					<button class="modal-button modal-button_cancel">Отменить</button>
+				</div>
+			</form>
+		</div>
+		<div class="modal-window modal-window_vacancies" data-type-of-modal-window="vacancies">
+			<button class="modal-window-close-btn"><svg class="modal-window-close-btn__icon" viewBox="0 0 329.3 329"><path d="m194.8 164.8 128.2-128.2c8.3-8.3 8.3-21.8 0-30.2-8.3-8.3-21.8-8.3-30.2 0l-128.2 128.2-128.2-128.2c-8.3-8.3-21.8-8.3-30.2 0-8.3 8.3-8.3 21.8 0 30.2l128.2 128.2-128.2 128.2c-8.3 8.3-8.3 21.8 0 30.2 4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2l128.2-128.2 128.2 128.2c4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2 8.3-8.3 8.3-21.8 0-30.2zm0 0"/></svg></button>
+			<h2 class="modal-heading">Вакансии</h2>
+			<p class="modal-message">На данный момент вакансий НЕТ!</p>
+			<p class="modal-message">Отправить резюме можно через окно <a class="modal-link" href="#" data-modal="reserve">обратной связи</a></p>
+		</div>
+	</div>
+	<div class="mobile-menu">
+		<div class="container container_mobile-menu-header">
+			<button class="mobile-menu__close-btn"></button>
+			<a href="#" class="mobile-menu__logo">sportrezerv.ru</a>
+			<button class="mobile-menu__reserve-btn" data-modal="reserve">
+				<img class="mobile-menu__reserve-btn-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAZCAYAAAA14t7uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKaSURBVHgBtVVPi9pAFB81gguCERE8FMxCwR6rIvVQaHrz6NFjSr+ApYceu99gC/0Am556KGXtqZcW9NaDNFmh0EKhKVjYS0n8U3bRqP29mMkm2ayyoA+G9ybzm/d+ee/NTIJFSKVSaRSLRXs4HFpsg8iyLOZyuUapVPppGMbSvxYPg8vl8otYLPZxPp8fsy0yHo/fQp1OJpOX4bVrjlerVcE1RbZFQCDlmne2Ot6VxCifiPwOdnqxWOjQ3UQi0SZNc9eOEhVDwpBDNrNtu0WMH5BTh348nmI7EJC5F0gFmBfwsYc86xifYDdv2oz1BtRnjO+wSdf96+EcU8GOEcDAUNj69yKFSEA9xfgC+zV04G+FiD0S2+AwAqtELTiO8SvGcrlsI7IVYkVtlCQb+TdJA5cljTRdoEjnwBxyPPz8wvyV5xiAzmAw+BCOio4hoORuUokA5kduAGaaZhYnr+sjoqCTuiCxvz7em2Nh0yLlnV0d7TMMqoHhMIrHbVw8liiKTR+mh3E/4LharT6Ees7nyNUTFIh6teAGOfiqaecwvd4+lKT3CNDidwYwf1CHIGN8uAuAtwl2mw4BLx4ccLak1QvGOtAprLf4HmA6ILS22e2FHP/eBhJ80Uww7LKrPxjh25nLkuZ0QY3Y+qI5OcAlBX3J1toRsKeAwRyn0+nedDod8bmu61atVjuCQ6cwyWTSeCzLFjAGxxj9/mU+n3/GMYIgGDgTQcZ4DZqIeMLneEkk5OuU5xgvijqbzbwDQiJJUhYF0/gcGMXLANuT7PeAIDd19Owb5Mprt0wmM0I+vdcDv/wNmLRbRCqUhVQwYLw9WPsBjEJNQI7/AlT354oEL2+AATDOxeNzcg3jw6oxMlCoR2x38k/TtP5/Zf0jm5J5i0gAAAAASUVORK5CYII=" alt="">
+			</button>
+		</div>
+		<div class="mobile-menu__separator"></div>
+		<div class="container container_mobile-menu-content">
+			<img src="/SportRezerv/assets/images/pri_podd.png" alt="" class="mobile-menu__image">
+			<nav class="mobile-menu__navigation">
+				<a href="#" class="mobile-menu__navigation-link">О проекте</a>
+				<a href="#" class="mobile-menu__navigation-link">Родителям</a>
+				<a href="#" class="mobile-menu__navigation-link">Тренерам</a>
+				<a href="#" class="mobile-menu__navigation-link">Статьи</a>
+				<a href="#" class="mobile-menu__navigation-link">Технологии</a>
+				<a href="#" class="mobile-menu__navigation-link">Галерея</a>
+			</nav>
+			<span class="header-search-button-wrapper header-search-button-wrapper_mobile-menu">
+				<a class="header-search-button" href="#"><svg class="header-search-button__icon" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.9 11.7H12.3L12 11.4C12.8 10.5 13.3 9.3 13.3 7.9 13.3 4.9 10.9 2.5 7.9 2.5 4.9 2.5 2.5 4.9 2.5 7.9 2.5 10.9 4.9 13.3 7.9 13.3 9.3 13.3 10.5 12.8 11.4 12L11.7 12.3V12.9L15.8 17.1 17.1 15.8 12.9 11.7ZM7.9 11.7C5.8 11.7 4.2 10 4.2 7.9 4.2 5.8 5.8 4.2 7.9 4.2 10 4.2 11.7 5.8 11.7 7.9 11.7 10 10 11.7 7.9 11.7Z"/></svg></a>
+				<div class="search-dimming"></div>
+				<span class="search-row-wrapper">
+					<input class="search-query-field" type="text">
+					<button class="search-btn" type="submit"><svg class="search-btn__icon" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.9 11.7H12.3L12 11.4C12.8 10.5 13.3 9.3 13.3 7.9 13.3 4.9 10.9 2.5 7.9 2.5 4.9 2.5 2.5 4.9 2.5 7.9 2.5 10.9 4.9 13.3 7.9 13.3 9.3 13.3 10.5 12.8 11.4 12L11.7 12.3V12.9L15.8 17.1 17.1 15.8 12.9 11.7ZM7.9 11.7C5.8 11.7 4.2 10 4.2 7.9 4.2 5.8 5.8 4.2 7.9 4.2 10 4.2 11.7 5.8 11.7 7.9 11.7 10 10 11.7 7.9 11.7Z"/></svg>Поиск</button>
+					<button class="close-search-btn"><svg class="close-search-btn__icon" viewBox="0 0 329.3 329"><path d="m194.8 164.8 128.2-128.2c8.3-8.3 8.3-21.8 0-30.2-8.3-8.3-21.8-8.3-30.2 0l-128.2 128.2-128.2-128.2c-8.3-8.3-21.8-8.3-30.2 0-8.3 8.3-8.3 21.8 0 30.2l128.2 128.2-128.2 128.2c-8.3 8.3-8.3 21.8 0 30.2 4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2l128.2-128.2 128.2 128.2c4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2 8.3-8.3 8.3-21.8 0-30.2zm0 0"/></svg></button>
+				</span>
+			</span>
+			<p class="mobile-menu__message">Спортивное тестирование детей</p>
+		</div>
+	</div>
+	<header class="select-region-header">
+		<div class="container container_select-region">
+			<span class="select-region-label">Выберите интересующий регион в котором действует Проект</span>
+			<div class="select">
+				<button class="select__label">
+					<span class="select__label-value">Москва 1</span>
+					<svg class="select__label-svg" width="10" height="6" viewBox="0 0 10 6">
+						<path class="select__label-svg-path" d="M5.7,5.7C5.5,5.9,5.3,6,5,6S4.5,5.9,4.3,5.7l-4-4c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0L5,3.6l3.3-3.3c0.4-0.4,1-0.4,1.4,0c0.4,0.4,0.4,1,0,1.4L5.7,5.7z"/>
+					</svg>
+				</button>
+				<input type="hidden" class="select__hidden-input" name="region" id="region-field">
+				<ul class="select__list">
+					<li class="select__list-item" data-value="Moscow-1">Москва 1</li>
+					<li class="select__list-item" data-value="Moscow-2">Москва 2</li>
+					<li class="select__list-item" data-value="Moscow-3">Москва 3</li>
+				</ul>
+			</div>
+			<div class="select-region-buttons-area">
+				<button class="select-region-submit-btn">Далее</button>
+				<button class="select-region-close-btn">
+					<svg class="select-region-close-btn__icon" viewBox="0 0 329.3 329"><path d="m194.8 164.8 128.2-128.2c8.3-8.3 8.3-21.8 0-30.2-8.3-8.3-21.8-8.3-30.2 0l-128.2 128.2-128.2-128.2c-8.3-8.3-21.8-8.3-30.2 0-8.3 8.3-8.3 21.8 0 30.2l128.2 128.2-128.2 128.2c-8.3 8.3-8.3 21.8 0 30.2 4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2l128.2-128.2 128.2 128.2c4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2 8.3-8.3 8.3-21.8 0-30.2zm0 0"/></svg>
+				</button>
+			</div>
+		</div>
+	</header>
+	<header class="header">
+		<div class="container container_header">
+			<button class="mobile-header-menu-btn"></button>
+			<a href="#" class="mobile-header-logo">sportrezerv.ru</a>
+			<button class="mobile-header-reserve-btn" data-modal="reserve">
+				<img class="mobile-header-reserve-btn__icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAZCAYAAAA14t7uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKaSURBVHgBtVVPi9pAFB81gguCERE8FMxCwR6rIvVQaHrz6NFjSr+ApYceu99gC/0Am556KGXtqZcW9NaDNFmh0EKhKVjYS0n8U3bRqP29mMkm2ayyoA+G9ybzm/d+ee/NTIJFSKVSaRSLRXs4HFpsg8iyLOZyuUapVPppGMbSvxYPg8vl8otYLPZxPp8fsy0yHo/fQp1OJpOX4bVrjlerVcE1RbZFQCDlmne2Ot6VxCifiPwOdnqxWOjQ3UQi0SZNc9eOEhVDwpBDNrNtu0WMH5BTh348nmI7EJC5F0gFmBfwsYc86xifYDdv2oz1BtRnjO+wSdf96+EcU8GOEcDAUNj69yKFSEA9xfgC+zV04G+FiD0S2+AwAqtELTiO8SvGcrlsI7IVYkVtlCQb+TdJA5cljTRdoEjnwBxyPPz8wvyV5xiAzmAw+BCOio4hoORuUokA5kduAGaaZhYnr+sjoqCTuiCxvz7em2Nh0yLlnV0d7TMMqoHhMIrHbVw8liiKTR+mh3E/4LharT6Ees7nyNUTFIh6teAGOfiqaecwvd4+lKT3CNDidwYwf1CHIGN8uAuAtwl2mw4BLx4ccLak1QvGOtAprLf4HmA6ILS22e2FHP/eBhJ80Uww7LKrPxjh25nLkuZ0QY3Y+qI5OcAlBX3J1toRsKeAwRyn0+nedDod8bmu61atVjuCQ6cwyWTSeCzLFjAGxxj9/mU+n3/GMYIgGDgTQcZ4DZqIeMLneEkk5OuU5xgvijqbzbwDQiJJUhYF0/gcGMXLANuT7PeAIDd19Owb5Mprt0wmM0I+vdcDv/wNmLRbRCqUhVQwYLw9WPsBjEJNQI7/AlT354oEL2+AATDOxeNzcg3jw6oxMlCoR2x38k/TtP5/Zf0jm5J5i0gAAAAASUVORK5CYII=" alt="">
+			</button>
+			<a class="header-logo" href="#">Спортивное тестирование детей</a>
+			<nav class="header-navigation">
+				<a class="header-navigation__link" href="#">О проекте</a>
+				<a class="header-navigation__link" href="#">Новости</a>
+				<a class="header-navigation__link" href="#">Родителям</a>
+				<a class="header-navigation__link" href="#">Тренерам</a>
+				<a class="header-navigation__link header-navigation__link_tablet-disable" href="#">Статьи</a>
+				<a class="header-navigation__link header-navigation__link_tablet-disable" href="#">Технологии</a>
+				<a class="header-navigation__link header-navigation__link_tablet-disable" href="#">Галерея</a>
+				<span class="header-navigation__drop-down">
+					<span class="header-navigation__drop-down-label">Ещё</span>
+					<ul class="header-navigation__drop-down-list">
+						<li class="header-navigation__drop-down-list-item">
+							<a class="header-navigation__drop-down-link" href="#">Статьи</a>
+						</li>
+						<li class="header-navigation__drop-down-list-item">
+							<span class="header-navigation__drop-down-link header-navigation__drop-down-link_current-page">Технологии</span>
+						</li>
+						<li class="header-navigation__drop-down-list-item">
+							<a class="header-navigation__drop-down-link" href="#">Галерея</a>
+						</li>
+					</ul>
+				</span>
+			</nav>
+			<div class="header-buttons">
+				<a class="header-reserve-button" href="#" data-modal="reserve">Записаться</a>
+				<span class="header-search-button-wrapper">
+					<a class="header-search-button" href="#"><svg class="header-search-button__icon" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.9 11.7H12.3L12 11.4C12.8 10.5 13.3 9.3 13.3 7.9 13.3 4.9 10.9 2.5 7.9 2.5 4.9 2.5 2.5 4.9 2.5 7.9 2.5 10.9 4.9 13.3 7.9 13.3 9.3 13.3 10.5 12.8 11.4 12L11.7 12.3V12.9L15.8 17.1 17.1 15.8 12.9 11.7ZM7.9 11.7C5.8 11.7 4.2 10 4.2 7.9 4.2 5.8 5.8 4.2 7.9 4.2 10 4.2 11.7 5.8 11.7 7.9 11.7 10 10 11.7 7.9 11.7Z"/></svg></a>
+					<span class="search-row-wrapper">
+						<input class="search-query-field" type="text">
+						<button class="search-btn" type="submit"><svg class="search-btn__icon" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.9 11.7H12.3L12 11.4C12.8 10.5 13.3 9.3 13.3 7.9 13.3 4.9 10.9 2.5 7.9 2.5 4.9 2.5 2.5 4.9 2.5 7.9 2.5 10.9 4.9 13.3 7.9 13.3 9.3 13.3 10.5 12.8 11.4 12L11.7 12.3V12.9L15.8 17.1 17.1 15.8 12.9 11.7ZM7.9 11.7C5.8 11.7 4.2 10 4.2 7.9 4.2 5.8 5.8 4.2 7.9 4.2 10 4.2 11.7 5.8 11.7 7.9 11.7 10 10 11.7 7.9 11.7Z"/></svg>Поиск</button>
+						<button class="close-search-btn"><svg class="close-search-btn__icon" viewBox="0 0 329.3 329"><path d="m194.8 164.8 128.2-128.2c8.3-8.3 8.3-21.8 0-30.2-8.3-8.3-21.8-8.3-30.2 0l-128.2 128.2-128.2-128.2c-8.3-8.3-21.8-8.3-30.2 0-8.3 8.3-8.3 21.8 0 30.2l128.2 128.2-128.2 128.2c-8.3 8.3-8.3 21.8 0 30.2 4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2l128.2-128.2 128.2 128.2c4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2 8.3-8.3 8.3-21.8 0-30.2zm0 0"/></svg></button>
+					</span>
+				</span>
+			</div>
+		</div>
+	</header>
+	<main class="main-content">
+		<section class="news-section">
+			<div class="container container_news">
+				<img src="/SportRezerv/assets/images/page-illustration.png" alt="" class="page-illustration">
+				<h1 class="page-heading">Заголовок новости</h1>
+				<p class="articles-single-data">Новости. Категория новости. Дата новости </p>
+				<div class="articles-single">
+					<img src="/SportRezerv/assets/images/banner-image.jpg" alt="">
+					<p>Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости. Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости.</p>
+					<p>Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости. Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости.</p>
+					<p>Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости. Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости.</p>
+					<p>Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости. Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости.</p>
+					<p>Текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости, текст новости. </p>
+				</div>
+				<div class="another-articles">
+					<div class="another-articles__item">
+						<h3 class="another-articles__heading">Заголовок новости</h3>
+						<a href="#" class="another-articles__link"></a>
+					</div>
+					<div class="another-articles__item">
+						<h3 class="another-articles__heading">Заголовок новости</h3>
+						<a href="#" class="another-articles__link"></a>
+					</div>
+					<div class="another-articles__item">
+						<h3 class="another-articles__heading">Заголовок новости</h3>
+						<a href="#" class="another-articles__link"></a>
+					</div>
+					<div class="another-articles__item">
+						<h3 class="another-articles__heading">Заголовок новости</h3>
+						<a href="#" class="another-articles__link"></a>
+					</div>
+					<div class="another-articles__item">
+						<h3 class="another-articles__heading">Заголовок новости</h3>
+						<a href="#" class="another-articles__link"></a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="container container_footer">
+			<nav class="footer-navigation">
+				<a href="#" class="footer-navigation__link">Онлайн тестирование</a>
+				<a href="#" class="footer-navigation__link">Вопросы</a>
+				<a href="#" class="footer-navigation__link" data-modal="vacancies">Вакансии</a>
+				<a href="#" class="footer-navigation__link">Обратная связь</a>
+				<a href="#" class="footer-navigation__link">info@sportrezerv.ru</a>
+				<a href="#" class="footer-navigation__link">+7 495 7881111</a>
+			</nav>
+			<span class="footer-location">Москва</span>
+			<div class="footer-separator"></div>
+			<nav class="footer-social">
+				<a href="#" class="footer-social__link">
+					<svg class="footer-social__icon footer-social__icon_instagram" viewBox="0 0 512 512"><path d="M256,166c-49.6,0-90,40.4-90,90s40.4,90,90,90s90-40.4,90-90S305.6,166,256,166z"/><path d="M373.4,0H138.6C62.2,0,0,62.2,0,138.6v234.8C0,449.8,62.2,512,138.6,512h234.8c76.4,0,138.6-62.2,138.6-138.6V138.6C512,62.2,449.8,0,373.4,0z M256,396c-77.2,0-140-62.8-140-140s62.8-140,140-140s140,62.8,140,140S333.2,396,256,396z M399.3,149c-22.8,0-41.4-18.6-41.4-41.4s18.6-41.4,41.4-41.4s41.4,18.6,41.4,41.4S422.2,149,399.3,149z"/></svg>
+					<span class="footer-social__text">Инстаграм</span>
+				</a>
+				<a href="#" class="footer-social__link">
+					<svg class="footer-social__icon footer-social__icon_facebook" viewBox="0 0 24 24"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg>
+					<span class="footer-social__text">Фейсбук</span>
+				</a>
+				<a href="#" class="footer-social__link">
+					<svg class="footer-social__icon footer-social__icon_vkontakte" viewBox="0 0 512 298.7"><path d="M424.9,171.3c-8.3-10.5-5.9-15.1,0-24.4c0.1-0.1,68.4-94.5,75.5-126.5l0,0c3.5-11.7,0-20.2-16.9-20.2h-56c-14.3,0-20.8,7.4-24.3,15.6c0,0-28.5,68.2-68.8,112.4c-13,12.8-19,16.9-26.1,16.9c-3.5,0-8.9-4.1-8.9-15.8V20.2c0-14-4-20.2-15.8-20.2h-88c-8.9,0-14.3,6.5-14.3,12.6c0,13.3,20.2,16.3,22.3,53.7v81c0,17.7-3.2,21-10.4,21c-19,0-65.2-68.5-92.6-146.9C95,6.2,89.6,0,75.2,0h-56C3.2,0,0,7.4,0,15.6c0,14.5,19,86.9,88.5,182.5c46.3,65.2,111.5,100.6,170.8,100.6c35.6,0,40-7.9,40-21.4c0-62.3-3.2-68.2,14.6-68.2c8.3,0,22.5,4.1,55.8,35.6c38,37.3,44.3,54,65.6,54h56c16,0,24-7.9,19.4-23.3C500,242.8,428.1,175.7,424.9,171.3z"/></svg>
+					<span class="footer-social__text">Вконтакте</span>
+				</a>
+			</nav>
+		</div>
+	</footer>
+</body>
+</html>

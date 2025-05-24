@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+	<title>Document</title>
+  <script type="module" crossorigin src="/SportRezerv/js/main.js"></script>
+  <link rel="stylesheet" crossorigin href="/SportRezerv/assets/stylesheets/main.css">
+</head>
+<body>
+	<div class="modal-windows">
+		<div class="modal-substrate"></div>
+		<div class="modal-window modal-window_reserve" data-type-of-modal-window="reserve">
+			<button class="modal-window-close-btn"><svg class="modal-window-close-btn__icon" viewBox="0 0 329.3 329"><path d="m194.8 164.8 128.2-128.2c8.3-8.3 8.3-21.8 0-30.2-8.3-8.3-21.8-8.3-30.2 0l-128.2 128.2-128.2-128.2c-8.3-8.3-21.8-8.3-30.2 0-8.3 8.3-8.3 21.8 0 30.2l128.2 128.2-128.2 128.2c-8.3 8.3-8.3 21.8 0 30.2 4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2l128.2-128.2 128.2 128.2c4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2 8.3-8.3 8.3-21.8 0-30.2zm0 0"/></svg></button>
+			<h2 class="modal-heading">Обратная связь</h2>
+			<form class="modal-form" action="">
+				<input class="modal-input" type="text" placeholder="ФИО">
+				<input class="modal-input" type="text" placeholder="Эл. почта">
+				<input class="modal-input" type="text" placeholder="Телефон">
+				<div class="select select_modal">
+					<button class="select__label">
+						<span class="select__label-value">Выберите тему</span>
+						<svg class="select__label-svg" width="10" height="6" viewBox="0 0 10 6">
+							<path class="select__label-svg-path" d="M5.7,5.7C5.5,5.9,5.3,6,5,6S4.5,5.9,4.3,5.7l-4-4c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0L5,3.6l3.3-3.3c0.4-0.4,1-0.4,1.4,0c0.4,0.4,0.4,1,0,1.4L5.7,5.7z"/>
+						</svg>
+					</button>
+					<input type="hidden" class="select__hidden-input" name="theme" id="theme-field">
+					<ul class="select__list">
+						<li class="select__list-item" data-value="Theme-1">Тема 1</li>
+						<li class="select__list-item" data-value="Theme-2">Тема 2</li>
+						<li class="select__list-item" data-value="Theme-3">Тема 3</li>
+					</ul>
+				</div>
+				<textarea class="modal-textarea" placeholder="Сообщение"></textarea>
+				<div class="modal-add-file-area">
+					<button class="modal-button modal-button_add-file">Прикрепить файл</button>
+					<span class="modal-label">Файл объёмом до 10 Мб</span>
+				</div>
+				<div class="modal-buttons-area">
+					<button class="modal-button modal-button_submit">Отправить</button>
+					<button class="modal-button modal-button_cancel">Отменить</button>
+				</div>
+			</form>
+		</div>
+		<div class="modal-window modal-window_vacancies" data-type-of-modal-window="vacancies">
+			<button class="modal-window-close-btn"><svg class="modal-window-close-btn__icon" viewBox="0 0 329.3 329"><path d="m194.8 164.8 128.2-128.2c8.3-8.3 8.3-21.8 0-30.2-8.3-8.3-21.8-8.3-30.2 0l-128.2 128.2-128.2-128.2c-8.3-8.3-21.8-8.3-30.2 0-8.3 8.3-8.3 21.8 0 30.2l128.2 128.2-128.2 128.2c-8.3 8.3-8.3 21.8 0 30.2 4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2l128.2-128.2 128.2 128.2c4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2 8.3-8.3 8.3-21.8 0-30.2zm0 0"/></svg></button>
+			<h2 class="modal-heading">Вакансии</h2>
+			<p class="modal-message">На данный момент вакансий НЕТ!</p>
+			<p class="modal-message">Отправить резюме можно через окно <a class="modal-link" href="#" data-modal="reserve">обратной связи</a></p>
+		</div>
+	</div>
+	<div class="mobile-menu">
+		<div class="container container_mobile-menu-header">
+			<button class="mobile-menu__close-btn"></button>
+			<a href="#" class="mobile-menu__logo">sportrezerv.ru</a>
+			<button class="mobile-menu__reserve-btn" data-modal="reserve">
+				<img class="mobile-menu__reserve-btn-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAZCAYAAAA14t7uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKaSURBVHgBtVVPi9pAFB81gguCERE8FMxCwR6rIvVQaHrz6NFjSr+ApYceu99gC/0Am556KGXtqZcW9NaDNFmh0EKhKVjYS0n8U3bRqP29mMkm2ayyoA+G9ybzm/d+ee/NTIJFSKVSaRSLRXs4HFpsg8iyLOZyuUapVPppGMbSvxYPg8vl8otYLPZxPp8fsy0yHo/fQp1OJpOX4bVrjlerVcE1RbZFQCDlmne2Ot6VxCifiPwOdnqxWOjQ3UQi0SZNc9eOEhVDwpBDNrNtu0WMH5BTh348nmI7EJC5F0gFmBfwsYc86xifYDdv2oz1BtRnjO+wSdf96+EcU8GOEcDAUNj69yKFSEA9xfgC+zV04G+FiD0S2+AwAqtELTiO8SvGcrlsI7IVYkVtlCQb+TdJA5cljTRdoEjnwBxyPPz8wvyV5xiAzmAw+BCOio4hoORuUokA5kduAGaaZhYnr+sjoqCTuiCxvz7em2Nh0yLlnV0d7TMMqoHhMIrHbVw8liiKTR+mh3E/4LharT6Ees7nyNUTFIh6teAGOfiqaecwvd4+lKT3CNDidwYwf1CHIGN8uAuAtwl2mw4BLx4ccLak1QvGOtAprLf4HmA6ILS22e2FHP/eBhJ80Uww7LKrPxjh25nLkuZ0QY3Y+qI5OcAlBX3J1toRsKeAwRyn0+nedDod8bmu61atVjuCQ6cwyWTSeCzLFjAGxxj9/mU+n3/GMYIgGDgTQcZ4DZqIeMLneEkk5OuU5xgvijqbzbwDQiJJUhYF0/gcGMXLANuT7PeAIDd19Owb5Mprt0wmM0I+vdcDv/wNmLRbRCqUhVQwYLw9WPsBjEJNQI7/AlT354oEL2+AATDOxeNzcg3jw6oxMlCoR2x38k/TtP5/Zf0jm5J5i0gAAAAASUVORK5CYII=" alt="">
+			</button>
+		</div>
+		<div class="mobile-menu__separator"></div>
+		<div class="container container_mobile-menu-content">
+			<img src="/SportRezerv/assets/images/pri_podd.png" alt="" class="mobile-menu__image">
+			<nav class="mobile-menu__navigation">
+				<a href="#" class="mobile-menu__navigation-link">О проекте</a>
+				<a href="#" class="mobile-menu__navigation-link">Родителям</a>
+				<a href="#" class="mobile-menu__navigation-link">Тренерам</a>
+				<a href="#" class="mobile-menu__navigation-link">Статьи</a>
+				<a href="#" class="mobile-menu__navigation-link">Технологии</a>
+				<a href="#" class="mobile-menu__navigation-link">Галерея</a>
+			</nav>
+			<span class="header-search-button-wrapper header-search-button-wrapper_mobile-menu">
+				<a class="header-search-button" href="#"><svg class="header-search-button__icon" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.9 11.7H12.3L12 11.4C12.8 10.5 13.3 9.3 13.3 7.9 13.3 4.9 10.9 2.5 7.9 2.5 4.9 2.5 2.5 4.9 2.5 7.9 2.5 10.9 4.9 13.3 7.9 13.3 9.3 13.3 10.5 12.8 11.4 12L11.7 12.3V12.9L15.8 17.1 17.1 15.8 12.9 11.7ZM7.9 11.7C5.8 11.7 4.2 10 4.2 7.9 4.2 5.8 5.8 4.2 7.9 4.2 10 4.2 11.7 5.8 11.7 7.9 11.7 10 10 11.7 7.9 11.7Z"/></svg></a>
+				<div class="search-dimming"></div>
+				<span class="search-row-wrapper">
+					<input class="search-query-field" type="text">
+					<button class="search-btn" type="submit"><svg class="search-btn__icon" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.9 11.7H12.3L12 11.4C12.8 10.5 13.3 9.3 13.3 7.9 13.3 4.9 10.9 2.5 7.9 2.5 4.9 2.5 2.5 4.9 2.5 7.9 2.5 10.9 4.9 13.3 7.9 13.3 9.3 13.3 10.5 12.8 11.4 12L11.7 12.3V12.9L15.8 17.1 17.1 15.8 12.9 11.7ZM7.9 11.7C5.8 11.7 4.2 10 4.2 7.9 4.2 5.8 5.8 4.2 7.9 4.2 10 4.2 11.7 5.8 11.7 7.9 11.7 10 10 11.7 7.9 11.7Z"/></svg>Поиск</button>
+					<button class="close-search-btn"><svg class="close-search-btn__icon" viewBox="0 0 329.3 329"><path d="m194.8 164.8 128.2-128.2c8.3-8.3 8.3-21.8 0-30.2-8.3-8.3-21.8-8.3-30.2 0l-128.2 128.2-128.2-128.2c-8.3-8.3-21.8-8.3-30.2 0-8.3 8.3-8.3 21.8 0 30.2l128.2 128.2-128.2 128.2c-8.3 8.3-8.3 21.8 0 30.2 4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2l128.2-128.2 128.2 128.2c4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2 8.3-8.3 8.3-21.8 0-30.2zm0 0"/></svg></button>
+				</span>
+			</span>
+			<p class="mobile-menu__message">Спортивное тестирование детей</p>
+		</div>
+	</div>
+	<header class="select-region-header">
+		<div class="container container_select-region">
+			<span class="select-region-label">Выберите интересующий регион в котором действует Проект</span>
+			<div class="select">
+				<button class="select__label">
+					<span class="select__label-value">Москва 1</span>
+					<svg class="select__label-svg" width="10" height="6" viewBox="0 0 10 6">
+						<path class="select__label-svg-path" d="M5.7,5.7C5.5,5.9,5.3,6,5,6S4.5,5.9,4.3,5.7l-4-4c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0L5,3.6l3.3-3.3c0.4-0.4,1-0.4,1.4,0c0.4,0.4,0.4,1,0,1.4L5.7,5.7z"/>
+					</svg>
+				</button>
+				<input type="hidden" class="select__hidden-input" name="region" id="region-field">
+				<ul class="select__list">
+					<li class="select__list-item" data-value="Moscow-1">Москва 1</li>
+					<li class="select__list-item" data-value="Moscow-2">Москва 2</li>
+					<li class="select__list-item" data-value="Moscow-3">Москва 3</li>
+				</ul>
+			</div>
+			<div class="select-region-buttons-area">
+				<button class="select-region-submit-btn">Далее</button>
+				<button class="select-region-close-btn">
+					<svg class="select-region-close-btn__icon" viewBox="0 0 329.3 329"><path d="m194.8 164.8 128.2-128.2c8.3-8.3 8.3-21.8 0-30.2-8.3-8.3-21.8-8.3-30.2 0l-128.2 128.2-128.2-128.2c-8.3-8.3-21.8-8.3-30.2 0-8.3 8.3-8.3 21.8 0 30.2l128.2 128.2-128.2 128.2c-8.3 8.3-8.3 21.8 0 30.2 4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2l128.2-128.2 128.2 128.2c4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2 8.3-8.3 8.3-21.8 0-30.2zm0 0"/></svg>
+				</button>
+			</div>
+		</div>
+	</header>
+	<header class="header">
+		<div class="container container_header">
+			<button class="mobile-header-menu-btn"></button>
+			<a href="#" class="mobile-header-logo">sportrezerv.ru</a>
+			<button class="mobile-header-reserve-btn" data-modal="reserve">
+				<img class="mobile-header-reserve-btn__icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAZCAYAAAA14t7uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKaSURBVHgBtVVPi9pAFB81gguCERE8FMxCwR6rIvVQaHrz6NFjSr+ApYceu99gC/0Am556KGXtqZcW9NaDNFmh0EKhKVjYS0n8U3bRqP29mMkm2ayyoA+G9ybzm/d+ee/NTIJFSKVSaRSLRXs4HFpsg8iyLOZyuUapVPppGMbSvxYPg8vl8otYLPZxPp8fsy0yHo/fQp1OJpOX4bVrjlerVcE1RbZFQCDlmne2Ot6VxCifiPwOdnqxWOjQ3UQi0SZNc9eOEhVDwpBDNrNtu0WMH5BTh348nmI7EJC5F0gFmBfwsYc86xifYDdv2oz1BtRnjO+wSdf96+EcU8GOEcDAUNj69yKFSEA9xfgC+zV04G+FiD0S2+AwAqtELTiO8SvGcrlsI7IVYkVtlCQb+TdJA5cljTRdoEjnwBxyPPz8wvyV5xiAzmAw+BCOio4hoORuUokA5kduAGaaZhYnr+sjoqCTuiCxvz7em2Nh0yLlnV0d7TMMqoHhMIrHbVw8liiKTR+mh3E/4LharT6Ees7nyNUTFIh6teAGOfiqaecwvd4+lKT3CNDidwYwf1CHIGN8uAuAtwl2mw4BLx4ccLak1QvGOtAprLf4HmA6ILS22e2FHP/eBhJ80Uww7LKrPxjh25nLkuZ0QY3Y+qI5OcAlBX3J1toRsKeAwRyn0+nedDod8bmu61atVjuCQ6cwyWTSeCzLFjAGxxj9/mU+n3/GMYIgGDgTQcZ4DZqIeMLneEkk5OuU5xgvijqbzbwDQiJJUhYF0/gcGMXLANuT7PeAIDd19Owb5Mprt0wmM0I+vdcDv/wNmLRbRCqUhVQwYLw9WPsBjEJNQI7/AlT354oEL2+AATDOxeNzcg3jw6oxMlCoR2x38k/TtP5/Zf0jm5J5i0gAAAAASUVORK5CYII=" alt="">
+			</button>
+			<a class="header-logo" href="#">Спортивное тестирование детей</a>
+			<nav class="header-navigation">
+				<a class="header-navigation__link" href="#">О проекте</a>
+				<a class="header-navigation__link" href="#">Новости</a>
+				<a class="header-navigation__link" href="#">Родителям</a>
+				<a class="header-navigation__link" href="#">Тренерам</a>
+				<a class="header-navigation__link header-navigation__link_tablet-disable" href="#">Статьи</a>
+				<a class="header-navigation__link header-navigation__link_tablet-disable" href="#">Технологии</a>
+				<a class="header-navigation__link header-navigation__link_tablet-disable" href="#">Галерея</a>
+				<span class="header-navigation__drop-down">
+					<span class="header-navigation__drop-down-label">Ещё</span>
+					<ul class="header-navigation__drop-down-list">
+						<li class="header-navigation__drop-down-list-item">
+							<a class="header-navigation__drop-down-link" href="#">Статьи</a>
+						</li>
+						<li class="header-navigation__drop-down-list-item">
+							<span class="header-navigation__drop-down-link header-navigation__drop-down-link_current-page">Технологии</span>
+						</li>
+						<li class="header-navigation__drop-down-list-item">
+							<a class="header-navigation__drop-down-link" href="#">Галерея</a>
+						</li>
+					</ul>
+				</span>
+			</nav>
+			<div class="header-buttons">
+				<a class="header-reserve-button" href="#" data-modal="reserve">Записаться</a>
+				<span class="header-search-button-wrapper">
+					<a class="header-search-button" href="#"><svg class="header-search-button__icon" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.9 11.7H12.3L12 11.4C12.8 10.5 13.3 9.3 13.3 7.9 13.3 4.9 10.9 2.5 7.9 2.5 4.9 2.5 2.5 4.9 2.5 7.9 2.5 10.9 4.9 13.3 7.9 13.3 9.3 13.3 10.5 12.8 11.4 12L11.7 12.3V12.9L15.8 17.1 17.1 15.8 12.9 11.7ZM7.9 11.7C5.8 11.7 4.2 10 4.2 7.9 4.2 5.8 5.8 4.2 7.9 4.2 10 4.2 11.7 5.8 11.7 7.9 11.7 10 10 11.7 7.9 11.7Z"/></svg></a>
+					<span class="search-row-wrapper">
+						<input class="search-query-field" type="text">
+						<button class="search-btn" type="submit"><svg class="search-btn__icon" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.9 11.7H12.3L12 11.4C12.8 10.5 13.3 9.3 13.3 7.9 13.3 4.9 10.9 2.5 7.9 2.5 4.9 2.5 2.5 4.9 2.5 7.9 2.5 10.9 4.9 13.3 7.9 13.3 9.3 13.3 10.5 12.8 11.4 12L11.7 12.3V12.9L15.8 17.1 17.1 15.8 12.9 11.7ZM7.9 11.7C5.8 11.7 4.2 10 4.2 7.9 4.2 5.8 5.8 4.2 7.9 4.2 10 4.2 11.7 5.8 11.7 7.9 11.7 10 10 11.7 7.9 11.7Z"/></svg>Поиск</button>
+						<button class="close-search-btn"><svg class="close-search-btn__icon" viewBox="0 0 329.3 329"><path d="m194.8 164.8 128.2-128.2c8.3-8.3 8.3-21.8 0-30.2-8.3-8.3-21.8-8.3-30.2 0l-128.2 128.2-128.2-128.2c-8.3-8.3-21.8-8.3-30.2 0-8.3 8.3-8.3 21.8 0 30.2l128.2 128.2-128.2 128.2c-8.3 8.3-8.3 21.8 0 30.2 4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2l128.2-128.2 128.2 128.2c4.2 4.2 9.6 6.3 15.1 6.3 5.5 0 10.9-2.1 15.1-6.2 8.3-8.3 8.3-21.8 0-30.2zm0 0"/></svg></button>
+					</span>
+				</span>
+			</div>
+		</div>
+	</header>
+	<main class="main-content">
+		<section class="news-section">
+			<div class="container container_news">
+				<img src="/SportRezerv/assets/images/page-illustration.png" alt="" class="page-illustration">
+				<div class="articles-heading">
+					<div class="articles-heading__wrapper">
+						<h1 class="articles-heading__text">Галерея</h1>
+						<ul class="articles-heading__categories-list">
+							<li class="articles-heading__category">
+								<a href="#" class="articles-heading__category-link">Все</a>
+							</li>
+							<li class="articles-heading__category">
+								<a href="#" class="articles-heading__category-link">Фотограции</a>
+							</li>
+							<li class="articles-heading__category">
+								<a href="#" class="articles-heading__category-link">Видео</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="gallery">
+					<div class="gallery__item">
+						<img src="/SportRezerv/assets/images/gallery-cover.jpg" alt="" class="gallery__cover">
+						<h2 class="gallery__heading">Заголовок галереи</h2>
+						<img src="data:image/png;base64,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" alt="" class="gallery__type-icon">
+						<a href="#" class="gallery__link"></a>
+					</div>
+					<div class="gallery__item">
+						<img src="/SportRezerv/assets/images/gallery-cover.jpg" alt="" class="gallery__cover">
+						<h2 class="gallery__heading">Заголовок галереи</h2>
+						<img src="data:image/png;base64,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" alt="" class="gallery__type-icon">
+						<a href="#" class="gallery__link"></a>
+					</div>
+					<div class="gallery__item">
+						<img src="/SportRezerv/assets/images/gallery-cover.jpg" alt="" class="gallery__cover">
+						<h2 class="gallery__heading">Заголовок галереи</h2>
+						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEUAAAA6CAYAAADm+ZQ9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAivSURBVHgB7VprbFRFFJ7bbqW2pa9tKUVoikGNaIFIMBGJ4YcSMfggBjXRxMQfREKIfyCpCNaqCAgkiCQohIchQVMSCKGNvwgJ4RVIFJTHH0JKS3hDWt60uzt+392ZZXr3Lt32ziIt/ZKTO3fm7JmZc+fMnHNmhRjAANKBIx4SpJTv4fEFqFr0HG2glY7j/Cb6C6CQb6Qd/A0qFn0dmMRKaRd9WzHS3grxU0y16GvIoEI0dou+hIegEI3t4iEeFr0CBvkwFZIxxTxQmIzbLY/RcSI9FPeA1yaOiPixnS7vTzjem1MxpFQKFMLJ8StUi/6HZtB0KOaIX6OvUtra2kqKior+Ev1TIRrNUMrTqizNhiw/bijkXdG/FNImks2rOhKJfOrH7KeULDCPFP0E7e3tS7AiqkiYV6PZhi1iZF1dXZK1ZHmYyODEYrGMHnOQfx2DbTh69Ohn69atezk/P38YBk2qbGpqeuPgwYPvX79+vUFYwPHjx//EI4d06NChZZ5mp76+njp44HzZGLpz5853MkO4ePHislmzZj0HRQxFXxUkT7lClYeuXbt2wtmzZxdGo9F22UtA8e9AVhnp0qVL8802zpPzFSm2EY2s0aNHP3Hr1q3vpWVgAPs4STXhIYrKSYMHDw5v3rz5JTX4ckWap2Ljxo0T+HvZC8BkWqiMa9euLfUql/OE/Cc4b7ymXCXZVAoGYFUpnJBaAVoRZfyCN27cWNPR0bHX5MX7v6zft2/fa4aShsyePfvZe/fuHZMWgX4Wcb6ct4xvHb7IBg2yqRROkl+7oKCACglv3759HCedzm9v3ry5paGhgf5SWP1+iE3FUCmcr5q3k3KlkAnLapG0AC7defPmPaO+dunOnTvHYgmf6YkM8m/btm0sf8+Vs2nTpvFB9hgTnGd3ShG2lXLmzJk5WiE7duwY01OFaPB3K1asGAE5JZR37ty5BdICPEpJiVB1dXUul5UMCE6EEygsLOQXLuytQjQ6Ozv3UA7l1dbWjrJhRtp8ZsyY0f1KsaGU06dPz1FLvujChQsfSQtobW19k/K4x+CoDrxauFJGjRqVZD5dzmdoLF6Z9cBjOy1g0P/gEQNFw+Hwx8ICKisrv6S84uLi6J49e5qEBZw6dYoPKsT3TLa20cJjZZxB+y+E/1EpLYLyIHcw5bMfGQC0iG5Ximqgmy+CAMfwMTxiFRUV0SlTpowRFjFp0qQqEf+qMZxurSIAaBFcKbQQKilRb/BIgwKBR3FpaalEp4FleTFo0CAmsiTlKx+o1zA/PuKuxEoJ+TEH3VNycnIK4VZHUeQpJGwCCudDQn6M/YgMIGmjhY2JoAiFQjW6jOUZaIl7gaO4XZehlBphAVu3bnWkTL2os+mn2HDe1q9fPwzynsS+kh90Q9RQG3gBKI/yZUCk8miT7KS5uVnYwNSpU2uGDx9Ou3UQw6wRFnD37l19DEvKFwFh7inSWCl+m4cMevoQ8CXehhnJy5cvi1WrVv0iLGD37t1LysvL6a84ZWVlnwg76DahZjX2QYTL5FE+qOjKlStLZQDw95BTDIXkHThw4HkbJpl2QGhrTyGw3H+GzDwQT4lSnBi/yl4Aqcs/RDxkoJx8HMWbpQUopeSKB+VTVGBkbaUQV69enSmUBwoqx/vanvyeihTxSLsYplOALNqH0hJ07NNdQEi/JddmkonLHHHKaBEP5Pi1hzQ2Nr7eXXqR7fv3758u4tm6cElJSdHJkydfsXWSEanMx/HZU5i4Xpibm/uVsAT0346s+ls1NTUnVB+kLOReR4wfP/5FHNsvcHOn04iTqnXXrl37Z86c2YJsm4SjGUWMEsGpOLGqqup3vBcJS7h9+/YPSJN+i2IUY4xCtq+zwpViJXXgB1xbLMZFG82oDBOmSSQy9yqjP9SoY3sYVAwTqpUZQKp0pHkk6/A5Y3c+yNrXYoJHzp8//8GGDRuewnsEFIWColjKjAdcYv2CBQsKcH07D2HCUZjOYpEB6HBGp0w0HE+ZXCFo8GsMdL7IIPCh2hlNYwnvxfMGJu9ea2LF1CDoGwF61aap+MEwHwZUdM5c8zEDQkmNHT582LGRZOoOnDAnThL/E1I5qaZSHARGfFoP9x9VqI/vWgtWrtDZA28+xUqU3JeA+Sbto0l2glDfQea8RTwGwJ7SonK00sgxdVXK5MmT3RYEc1uQzAmU1XrUgf2kpampqTEdXp7XjAUKeJcb9K7mUYVx68jcTNJlmNcn4b8OQidOnOClcwhXnuG5c+d+jguoiaKfgJdoy5cv/3H16tVX4Qd1oorEIzmRn05SiohrLUdRSNz39rJwpjNeEHl5eQ7s0Tyl/O5NEnWKX5g8WgafdK8Bk8cclzTkuVDjSHIyIUsoGV450vgdy1GtDIQZndOmTYvW19enVIq++wkhIg0hQRSCd5kNZy6xvODUMT5J8KMjoTpyGKuwDXWOjiP4bvxG8yQGyzbF5/gpwJyUZ5zSHAOhxuEdp9unHouIO2kRk6Qn7vHNvMGEYlCI63JnZ2e7WoUJuS45BGtX3BWOgWhvMKLbcP67ZQZzfFfPiMET0S6+4tMDpdyoMeDE8mY9xyDiXzmi+KJ6DOgzESaQdD8k9q/etaloPvYbM08eP6W4l0zYU7TATthdB8sI5iLInutBdqLcYQy6A/cw7pOEleXWe56uPMXn1lEe0orkv6flKN4OYwIuob4D6c2EouAJJ/qnTLab77ofyiKv8Z6QCw/evX+Rnky+X/DnGApzjKdbj8yc28gEN8sq0e0wSc2crBai60WKPQL8Du6bu92X0If0JNO78Ck5ZrtU43L52M5Kjo0EvyQG10Nie5Dw4GMy7smm7cVrhWTV1dXpDTiEjUlvwCRzQzbrQujYJV3Wv9VlTZ53r6wu8lLw5agxmWPp0o/KrGkZ2eL+h0458bSVJI34gNDv7tGhGrw8Xvi196Yu3XYfvscmthvAAAbwaOA/i+Eus/LgSIwAAAAASUVORK5CYII=" alt="" class="gallery__type-icon">
+						<a href="#" class="gallery__link"></a>
+					</div>
+					<div class="gallery__item">
+						<img src="/SportRezerv/assets/images/gallery-cover.jpg" alt="" class="gallery__cover">
+						<h2 class="gallery__heading">Заголовок галереи</h2>
+						<img src="data:image/png;base64,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" alt="" class="gallery__type-icon">
+						<a href="#" class="gallery__link"></a>
+					</div>
+					<div class="gallery__item">
+						<img src="/SportRezerv/assets/images/gallery-cover.jpg" alt="" class="gallery__cover">
+						<h2 class="gallery__heading">Заголовок галереи</h2>
+						<img src="data:image/png;base64,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" alt="" class="gallery__type-icon">
+						<a href="#" class="gallery__link"></a>
+					</div>
+					<div class="gallery__item">
+						<img src="/SportRezerv/assets/images/gallery-cover.jpg" alt="" class="gallery__cover">
+						<h2 class="gallery__heading">Заголовок галереи</h2>
+						<img src="data:image/png;base64,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" alt="" class="gallery__type-icon">
+						<a href="#" class="gallery__link"></a>
+					</div>
+				</div>
+				<div class="load-more-btn-wrapper">
+					<button class="load-more-btn">Загрузить ещё...</button>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="container container_footer">
+			<nav class="footer-navigation">
+				<a href="#" class="footer-navigation__link">Онлайн тестирование</a>
+				<a href="#" class="footer-navigation__link">Вопросы</a>
+				<a href="#" class="footer-navigation__link" data-modal="vacancies">Вакансии</a>
+				<a href="#" class="footer-navigation__link">Обратная связь</a>
+				<a href="#" class="footer-navigation__link">info@sportrezerv.ru</a>
+				<a href="#" class="footer-navigation__link">+7 495 7881111</a>
+			</nav>
+			<span class="footer-location">Москва</span>
+			<div class="footer-separator"></div>
+			<nav class="footer-social">
+				<a href="#" class="footer-social__link">
+					<svg class="footer-social__icon footer-social__icon_instagram" viewBox="0 0 512 512"><path d="M256,166c-49.6,0-90,40.4-90,90s40.4,90,90,90s90-40.4,90-90S305.6,166,256,166z"/><path d="M373.4,0H138.6C62.2,0,0,62.2,0,138.6v234.8C0,449.8,62.2,512,138.6,512h234.8c76.4,0,138.6-62.2,138.6-138.6V138.6C512,62.2,449.8,0,373.4,0z M256,396c-77.2,0-140-62.8-140-140s62.8-140,140-140s140,62.8,140,140S333.2,396,256,396z M399.3,149c-22.8,0-41.4-18.6-41.4-41.4s18.6-41.4,41.4-41.4s41.4,18.6,41.4,41.4S422.2,149,399.3,149z"/></svg>
+					<span class="footer-social__text">Инстаграм</span>
+				</a>
+				<a href="#" class="footer-social__link">
+					<svg class="footer-social__icon footer-social__icon_facebook" viewBox="0 0 24 24"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg>
+					<span class="footer-social__text">Фейсбук</span>
+				</a>
+				<a href="#" class="footer-social__link">
+					<svg class="footer-social__icon footer-social__icon_vkontakte" viewBox="0 0 512 298.7"><path d="M424.9,171.3c-8.3-10.5-5.9-15.1,0-24.4c0.1-0.1,68.4-94.5,75.5-126.5l0,0c3.5-11.7,0-20.2-16.9-20.2h-56c-14.3,0-20.8,7.4-24.3,15.6c0,0-28.5,68.2-68.8,112.4c-13,12.8-19,16.9-26.1,16.9c-3.5,0-8.9-4.1-8.9-15.8V20.2c0-14-4-20.2-15.8-20.2h-88c-8.9,0-14.3,6.5-14.3,12.6c0,13.3,20.2,16.3,22.3,53.7v81c0,17.7-3.2,21-10.4,21c-19,0-65.2-68.5-92.6-146.9C95,6.2,89.6,0,75.2,0h-56C3.2,0,0,7.4,0,15.6c0,14.5,19,86.9,88.5,182.5c46.3,65.2,111.5,100.6,170.8,100.6c35.6,0,40-7.9,40-21.4c0-62.3-3.2-68.2,14.6-68.2c8.3,0,22.5,4.1,55.8,35.6c38,37.3,44.3,54,65.6,54h56c16,0,24-7.9,19.4-23.3C500,242.8,428.1,175.7,424.9,171.3z"/></svg>
+					<span class="footer-social__text">Вконтакте</span>
+				</a>
+			</nav>
+		</div>
+	</footer>
+</body>
+</html>
