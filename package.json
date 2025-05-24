@@ -21,7 +21,6 @@
     "vite": "^6.3.5"
   },
   "dependencies": {
-    "image-map-resizer": "^1.0.10",
     "jquery": "^3.5.1",
     "slick-carousel": "^1.8.1"
   }
