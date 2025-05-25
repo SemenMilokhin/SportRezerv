@@ -2,7 +2,7 @@
 
 ### Статичная вёрстка 12 страниц + различная динамика на css и js :
 
-| Название | Ссылка |
+| Страница | Ссылка |
 | --- | --- |
 | Главная | [index.html](https://semenmilokhin.github.io/SportRezerv/index.html) |
 | О проекте | [about.html](https://semenmilokhin.github.io/SportRezerv/about.html) |
