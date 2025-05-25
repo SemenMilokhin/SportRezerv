@@ -1,6 +1,6 @@
 {
   "name": "sport-rezerv",
-  "description": "Вёрстка (неадаптивная) + динамика на css, js",
+  "description": "Вёрстка (адаптивная) + динамика на css, js",
   "private": true,
   "version": "1.0.0",
   "type": "module",
